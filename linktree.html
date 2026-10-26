@@ -21,25 +21,22 @@
     <meta property="og:site_name" content="HEIF Artist">
 
     <!-- Preconnect for Performance (Google Fonts) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/img/logow.png">
     <link rel="apple-touch-icon" href="assets/img/logow.png">
 
-    <link rel="stylesheet" href="assets/css/LINKTRERE.css">
-    <link rel="stylesheet" href="assets/css/css.css">
-    <link rel="stylesheet" href="assets/css/cursor.css">
-    <script src="assets/vendor/three.min.js" defer></script>
-    <script src="assets/vendor/gsap.min.js" defer></script>
-    <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
-    <script src="assets/vendor/lenis.min.js" defer></script>
-    <script src="assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="assets/css/LINKTRERE.css?v=20261026-speed2">
+    <link rel="stylesheet" href="assets/css/css.css?v=20261026-speed2">
+    <link rel="stylesheet" href="assets/css/cursor.css?v=20261026-speed2">
 
-    <script src="assets/js/scroll-animations.js" defer></script>
-    <script src="assets/js/particles-effect.js" defer></script>
-<link rel="stylesheet" href="assets/css/performance.css">
+    <script src="assets/js/script.js?v=20261026-speed2" defer></script>
+
+    <script src="assets/js/scroll-animations.js?v=20261026-speed2" defer></script>
+
+<link rel="stylesheet" href="assets/css/performance.css?v=20261026-speed2">
+<script src="assets/js/image-delivery.js?v=20261026-speed2" defer></script>
+<noscript><style>.lazy-image{display:none!important}</style></noscript>
 </head>
 
 <body>
@@ -48,9 +45,6 @@
     <div class="scroll-tracker"></div>
 
     <!-- Preloader -->
-    
-
-    <canvas id="webgl-canvas"></canvas>
 
     <div class="stars-layer">
         <div class="stars-extra"></div>
@@ -84,39 +78,43 @@
         <div class="wil-content">
             <div class="container">
                 <section class="profile-section" aria-labelledby="profile-heading">
-                    <img src="assets/optimized/b0a9cb41b6ea28a0-1600.webp" alt="HEIF Artist Profile Picture" class="profile-pic"
-                        loading="lazy" decoding="async" srcset="assets/optimized/b0a9cb41b6ea28a0-480.webp 480w, assets/optimized/b0a9cb41b6ea28a0-960.webp 960w, assets/optimized/b0a9cb41b6ea28a0-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="2552" height="2552">
+                    <img data-src="assets/optimized/b0a9cb41b6ea28a0-1600.webp" alt="HEIF Artist Profile Picture" class="profile-pic lazy-image"
+                        loading="lazy" decoding="async" data-srcset="assets/optimized/b0a9cb41b6ea28a0-480.webp 480w, assets/optimized/b0a9cb41b6ea28a0-960.webp 960w, assets/optimized/b0a9cb41b6ea28a0-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="2552" height="2552" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272552%27%20height%3D%272552%27%2F%3E"><noscript><img src="assets/optimized/b0a9cb41b6ea28a0-1600.webp" alt="HEIF Artist Profile Picture" class="profile-pic"
+                        loading="lazy" decoding="async" srcset="assets/optimized/b0a9cb41b6ea28a0-480.webp 480w, assets/optimized/b0a9cb41b6ea28a0-960.webp 960w, assets/optimized/b0a9cb41b6ea28a0-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="2552" height="2552"></noscript>
                     <h1 id="profile-heading" class="name">HIMALAY.HEIF</h1>
                     <p class="bio">ALL LINKS!!</p>
                 </section>
 
                 <nav class="links-section" aria-label="Social links">
                     <a href="https://www.behance.net/himalaypsd" target="_blank" rel="noopener noreferrer" class="link">
-                        <img src="assets/ICONS WEB/portfolio.svg" alt="" class="icon" aria-hidden="true" loading="lazy" decoding="async"><span>My
+                        <img data-src="assets/optimized/icon-de51032630.webp" alt="" class="icon lazy-image" aria-hidden="true" loading="lazy" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="><noscript><img src="assets/optimized/icon-de51032630.webp" alt="" class="icon" aria-hidden="true" loading="lazy" decoding="async"></noscript><span>My
                             Portfolio</span>
                     </a>
                     <a href="https://www.instagram.com/himalay.heif" target="_blank" rel="noopener noreferrer"
                         class="link">
-                        <img src="assets/ICONS WEB/instagram.svg" alt="" class="icon" aria-hidden="true" loading="lazy" decoding="async"><span>INSTAGRAM
+                        <img data-src="assets/optimized/icon-bbe7a79ed4.webp" alt="" class="icon lazy-image" aria-hidden="true" loading="lazy" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="><noscript><img src="assets/optimized/icon-bbe7a79ed4.webp" alt="" class="icon" aria-hidden="true" loading="lazy" decoding="async"></noscript><span>INSTAGRAM
                             MAIN</span>
                     </a>
                     <a href="https://www.instagram.com/himalay.psd/" target="_blank" rel="noopener noreferrer"
                         class="link">
-                        <img src="assets/ICONS WEB/instagram.svg" alt="" class="icon"
-                            aria-hidden="true" loading="lazy" decoding="async"><span>HIMALAY.PSD</span>
+                        <img data-src="assets/optimized/icon-bbe7a79ed4.webp" alt="" class="icon lazy-image"
+                            aria-hidden="true" loading="lazy" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="><noscript><img src="assets/optimized/icon-bbe7a79ed4.webp" alt="" class="icon"
+                            aria-hidden="true" loading="lazy" decoding="async"></noscript><span>HIMALAY.PSD</span>
                     </a>
                     <a href="https://himalayheif.blogspot.com/?m=1" target="_blank" rel="noopener noreferrer"
                         class="link">
-                        <img src="assets/ICONS WEB/wallpaper website.svg" alt="" class="icon"
-                            aria-hidden="true" loading="lazy" decoding="async"><span>WALLPAPER WEBSITE</span>
+                        <img data-src="assets/optimized/icon-b5edc15bb6.webp" alt="" class="icon lazy-image"
+                            aria-hidden="true" loading="lazy" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="><noscript><img src="assets/optimized/icon-b5edc15bb6.webp" alt="" class="icon"
+                            aria-hidden="true" loading="lazy" decoding="async"></noscript><span>WALLPAPER WEBSITE</span>
                     </a>
                     <a href="https://www.youtube.com/@himalayheif" target="_blank" rel="noopener noreferrer"
                         class="link">
-                        <img src="assets/ICONS WEB/youtube.svg" alt="" class="icon"
-                            aria-hidden="true" loading="lazy" decoding="async"><span>YOUTUBE</span>
+                        <img data-src="assets/optimized/icon-fcdbf39b63.webp" alt="" class="icon lazy-image"
+                            aria-hidden="true" loading="lazy" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="><noscript><img src="assets/optimized/icon-fcdbf39b63.webp" alt="" class="icon"
+                            aria-hidden="true" loading="lazy" decoding="async"></noscript><span>YOUTUBE</span>
                     </a>
                     <a href="https://pushwear.in/" target="_blank" rel="noopener noreferrer" class="link">
-                        <img src="assets/ICONS WEB/portfolio.svg" alt="" class="icon" aria-hidden="true" loading="lazy" decoding="async"><span>CLOTHING
+                        <img data-src="assets/optimized/icon-de51032630.webp" alt="" class="icon lazy-image" aria-hidden="true" loading="lazy" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="><noscript><img src="assets/optimized/icon-de51032630.webp" alt="" class="icon" aria-hidden="true" loading="lazy" decoding="async"></noscript><span>CLOTHING
                             BRAND</span>
                     </a>
                 </nav>
@@ -129,8 +127,9 @@
         <div class="footer-container">
             <div class="footer-logo-container">
                 <a href="index.html" aria-label="HEIF Artist Home">
-                    <img src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo" loading="lazy"
-                        decoding="async" srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596">
+                    <img data-src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo lazy-image" loading="lazy"
+                        decoding="async" data-srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272550%27%20height%3D%27596%27%2F%3E"><noscript><img src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo" loading="lazy"
+                        decoding="async" srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596"></noscript>
                 </a>
             </div>
             <div class="footer-home">
@@ -149,7 +148,6 @@
         </div>
     </footer>
 
-    
 </body>
 
 </html>

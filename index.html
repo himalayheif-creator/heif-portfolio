@@ -17,28 +17,21 @@
     content="Professional graphic designer and video editor transforming your visuals into masterpieces." />
   <meta property="og:image" content="assets/img/logo-full.png" />
   <meta property="og:site_name" content="HEIF Artist" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="icon" type="image/png" href="assets/img/logow.png" />
   <link rel="apple-touch-icon" href="assets/img/logow.png" />
 
-  <link rel="stylesheet" href="assets/css/css.css" />
-  <link rel="stylesheet" href="assets/css/cursor.css" />
-  <script src="assets/vendor/three.min.js" defer></script>
-  <script src="assets/vendor/GLTFLoader.js" defer></script>
-  <script src="assets/vendor/gsap.min.js" defer></script>
+  <link rel="stylesheet" href="assets/css/css.css?v=20261026-speed2" />
+  <link rel="stylesheet" href="assets/css/cursor.css?v=20261026-speed2" />
+
   <!-- 3D Scripts -->
-  <script src="assets/js/hero1-3d.js" defer></script>
-  <script src="assets/js/hero-3d.js" defer></script>
-  <script src="assets/js/ae-3d.js" defer></script>
 
-  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
-  <script src="assets/vendor/lenis.min.js" defer></script>
-  <script src="assets/js/script.js" defer></script>
+  <script src="assets/js/script.js?v=20261026-speed2" defer></script>
 
-  <script src="assets/js/scroll-animations.js" defer></script>
-  <script src="assets/js/particles-effect.js" defer></script>
-<link rel="stylesheet" href="assets/css/performance.css">
+  <script src="assets/js/scroll-animations.js?v=20261026-speed2" defer></script>
+
+<link rel="stylesheet" href="assets/css/performance.css?v=20261026-speed2">
+<script src="assets/js/image-delivery.js?v=20261026-speed2" defer></script>
+<noscript><style>.lazy-image{display:none!important}</style></noscript>
 </head>
 
 <body id="home-page">
@@ -46,8 +39,7 @@
   <a href="#main-content" class="skip-link">Skip to main content</a>
   <div class="scroll-tracker"></div>
   <!-- Preloader -->
-  
-  <canvas id="webgl-canvas"></canvas>
+
   <div class="stars-layer">
     <div class="stars-extra"></div>
   </div>
@@ -72,7 +64,7 @@
   </header>
   <main id="main-content">
     <section class="hero" aria-labelledby="hero-heading">
-      <div id="hero-3d-model" aria-hidden="true"></div>
+      <img class="model-still model-still-ps" src="assets/optimized/photoshop-still.webp" width="184" height="205" alt="" aria-hidden="true" fetchpriority="low" decoding="async">
       <h1 id="hero-heading" class="reveal">
         HI! I'M <br />HIMALAY <br /><span style="display: block">DESIGNER,</span><br style="display: contents" /><span
           style="display: block">EDITOR</span>
@@ -86,9 +78,7 @@
 
     <section class="hero1" style="position: relative;">
       <!-- Isolated 3D Container for After Effects Logo directly in the section it scrolls with -->
-      <div id="ae-3d-model"
-        style="position: absolute; inset: auto; translate: -60% 40%; width: 100%; height: 100%; z-index: -1; pointer-events: none;">
-      </div>
+      <img class="model-still model-still-ae lazy-image" data-src="assets/optimized/after-effects-still.webp" width="121" height="117" alt="" aria-hidden="true" loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27121%27%20height%3D%27117%27%2F%3E"><noscript><img class="model-still model-still-ae" src="assets/optimized/after-effects-still.webp" width="121" height="117" alt="" aria-hidden="true" loading="lazy" decoding="async"></noscript>
 
       <div class="hero1-parallax-wrapper">
         <h2 id="heif" class="reveal">EXPERIENCE THE</h2><br>
@@ -110,18 +100,21 @@
         </h2>
         <div class="role-badges reveal" style="transition-delay: 0.7s">
           <span class="role-badge">
-            <img src="assets/ICONS WEB/graphic design button.svg" alt="" style="margin-right: 8px;" loading="lazy"
-              decoding="async">
+            <img data-src="assets/optimized/icon-2437249dfc.webp" alt="" style="margin-right: 8px;" loading="lazy"
+              decoding="async" class="lazy-image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="><noscript><img src="assets/optimized/icon-2437249dfc.webp" alt="" style="margin-right: 8px;" loading="lazy"
+              decoding="async"></noscript>
             Graphic Designer
           </span>
           <span class="role-badge">
-            <img src="assets/ICONS WEB/video editing button.svg" alt="" style="margin-right: 8px;" loading="lazy"
-              decoding="async">
+            <img data-src="assets/optimized/icon-f5f1dbacb8.webp" alt="" style="margin-right: 8px;" loading="lazy"
+              decoding="async" class="lazy-image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="><noscript><img src="assets/optimized/icon-f5f1dbacb8.webp" alt="" style="margin-right: 8px;" loading="lazy"
+              decoding="async"></noscript>
             Video Editor
           </span>
           <span class="role-badge">
-            <img src="assets/ICONS WEB/photo editing.svg" alt="" style="margin-right: 8px;" loading="lazy"
-              decoding="async">
+            <img data-src="assets/optimized/icon-7ff6203374.webp" alt="" style="margin-right: 8px;" loading="lazy"
+              decoding="async" class="lazy-image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="><noscript><img src="assets/optimized/icon-7ff6203374.webp" alt="" style="margin-right: 8px;" loading="lazy"
+              decoding="async"></noscript>
             Photo Editor
           </span>
         </div>
@@ -130,50 +123,58 @@
 
     <section class="portfolio-container" aria-label="Featured portfolio items">
       <article class="thumbnail">
-        <a href="work-detailposter.html"><img src="assets/optimized/7ca29b3886ff9124-750.webp"
-            alt="Poster design portfolio showcase" loading="lazy" decoding="async" srcset="assets/optimized/7ca29b3886ff9124-480.webp 480w, assets/optimized/7ca29b3886ff9124-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" />
+        <a href="work-detailposter.html"><img data-src="assets/optimized/7ca29b3886ff9124-750.webp"
+            alt="Poster design portfolio showcase" loading="lazy" decoding="async" data-srcset="assets/optimized/7ca29b3886ff9124-480.webp 480w, assets/optimized/7ca29b3886ff9124-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27750%27%20height%3D%27750%27%2F%3E" /><noscript><img src="assets/optimized/7ca29b3886ff9124-750.webp"
+            alt="Poster design portfolio showcase" loading="lazy" decoding="async" srcset="assets/optimized/7ca29b3886ff9124-480.webp 480w, assets/optimized/7ca29b3886ff9124-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" /></noscript>
           <div class="caption">POSTER DESIGN</div>
         </a>
       </article>
       <article class="thumbnail">
-        <a href="work-detailgraphics.html"><img src="assets/optimized/047d73d7ba27ed36-750.webp"
-            alt="Graphic design portfolio showcase" loading="lazy" decoding="async" srcset="assets/optimized/047d73d7ba27ed36-480.webp 480w, assets/optimized/047d73d7ba27ed36-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" />
+        <a href="work-detailgraphics.html"><img data-src="assets/optimized/047d73d7ba27ed36-750.webp"
+            alt="Graphic design portfolio showcase" loading="lazy" decoding="async" data-srcset="assets/optimized/047d73d7ba27ed36-480.webp 480w, assets/optimized/047d73d7ba27ed36-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27750%27%20height%3D%27750%27%2F%3E" /><noscript><img src="assets/optimized/047d73d7ba27ed36-750.webp"
+            alt="Graphic design portfolio showcase" loading="lazy" decoding="async" srcset="assets/optimized/047d73d7ba27ed36-480.webp 480w, assets/optimized/047d73d7ba27ed36-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" /></noscript>
           <div class="caption">GRAPHIC DESIGN</div>
         </a>
       </article>
       <article class="thumbnail">
-        <a href="work-detailmanipulation.html"><img src="assets/optimized/44ca6e3bd7c35fba-750.webp"
-            alt="Photo manipulation portfolio showcase" loading="lazy" decoding="async" srcset="assets/optimized/44ca6e3bd7c35fba-480.webp 480w, assets/optimized/44ca6e3bd7c35fba-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" />
+        <a href="work-detailmanipulation.html"><img data-src="assets/optimized/44ca6e3bd7c35fba-750.webp"
+            alt="Photo manipulation portfolio showcase" loading="lazy" decoding="async" data-srcset="assets/optimized/44ca6e3bd7c35fba-480.webp 480w, assets/optimized/44ca6e3bd7c35fba-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27750%27%20height%3D%27750%27%2F%3E" /><noscript><img src="assets/optimized/44ca6e3bd7c35fba-750.webp"
+            alt="Photo manipulation portfolio showcase" loading="lazy" decoding="async" srcset="assets/optimized/44ca6e3bd7c35fba-480.webp 480w, assets/optimized/44ca6e3bd7c35fba-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" /></noscript>
           <div class="caption">PHOTO MANIPULATION</div>
         </a>
       </article>
       <article class="thumbnail">
-        <a href="work-detailphotography.html"><img src="assets/optimized/d8f2dd52a62703d9-750.webp"
-            alt="Photography portfolio showcase" loading="lazy" decoding="async" srcset="assets/optimized/d8f2dd52a62703d9-480.webp 480w, assets/optimized/d8f2dd52a62703d9-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" />
+        <a href="work-detailphotography.html"><img data-src="assets/optimized/d8f2dd52a62703d9-750.webp"
+            alt="Photography portfolio showcase" loading="lazy" decoding="async" data-srcset="assets/optimized/d8f2dd52a62703d9-480.webp 480w, assets/optimized/d8f2dd52a62703d9-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27750%27%20height%3D%27750%27%2F%3E" /><noscript><img src="assets/optimized/d8f2dd52a62703d9-750.webp"
+            alt="Photography portfolio showcase" loading="lazy" decoding="async" srcset="assets/optimized/d8f2dd52a62703d9-480.webp 480w, assets/optimized/d8f2dd52a62703d9-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" /></noscript>
           <div class="caption">PHOTOGRAPHY</div>
         </a>
       </article>
       <article class="thumbnail">
-        <a href="work-detailgrading.html"><img src="assets/optimized/543cd27e62929a2a-750.webp"
-            alt="Color grading portfolio showcase" loading="lazy" decoding="async" srcset="assets/optimized/543cd27e62929a2a-480.webp 480w, assets/optimized/543cd27e62929a2a-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" />
+        <a href="work-detailgrading.html"><img data-src="assets/optimized/543cd27e62929a2a-750.webp"
+            alt="Color grading portfolio showcase" loading="lazy" decoding="async" data-srcset="assets/optimized/543cd27e62929a2a-480.webp 480w, assets/optimized/543cd27e62929a2a-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27750%27%20height%3D%27750%27%2F%3E" /><noscript><img src="assets/optimized/543cd27e62929a2a-750.webp"
+            alt="Color grading portfolio showcase" loading="lazy" decoding="async" srcset="assets/optimized/543cd27e62929a2a-480.webp 480w, assets/optimized/543cd27e62929a2a-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" /></noscript>
           <div class="caption">GRADING</div>
         </a>
       </article>
       <article class="thumbnail">
-        <a href="work-detailvideowork.html"><img src="assets/optimized/5f943dada0cefe4b-750.webp"
-            alt="Video editing portfolio showcase" loading="lazy" decoding="async" srcset="assets/optimized/5f943dada0cefe4b-480.webp 480w, assets/optimized/5f943dada0cefe4b-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" />
+        <a href="work-detailvideowork.html"><img data-src="assets/optimized/5f943dada0cefe4b-750.webp"
+            alt="Video editing portfolio showcase" loading="lazy" decoding="async" data-srcset="assets/optimized/5f943dada0cefe4b-480.webp 480w, assets/optimized/5f943dada0cefe4b-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27750%27%20height%3D%27750%27%2F%3E" /><noscript><img src="assets/optimized/5f943dada0cefe4b-750.webp"
+            alt="Video editing portfolio showcase" loading="lazy" decoding="async" srcset="assets/optimized/5f943dada0cefe4b-480.webp 480w, assets/optimized/5f943dada0cefe4b-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" /></noscript>
           <div class="caption">VIDEO EDITING</div>
         </a>
       </article>
       <article class="thumbnail">
-        <a href="work-detailclothing.html"><img src="assets/optimized/475c29327cdfbc1c-750.webp"
-            alt="Clothing design portfolio showcase" loading="lazy" decoding="async" srcset="assets/optimized/475c29327cdfbc1c-480.webp 480w, assets/optimized/475c29327cdfbc1c-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" />
+        <a href="work-detailclothing.html"><img data-src="assets/optimized/475c29327cdfbc1c-750.webp"
+            alt="Clothing design portfolio showcase" loading="lazy" decoding="async" data-srcset="assets/optimized/475c29327cdfbc1c-480.webp 480w, assets/optimized/475c29327cdfbc1c-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27750%27%20height%3D%27750%27%2F%3E" /><noscript><img src="assets/optimized/475c29327cdfbc1c-750.webp"
+            alt="Clothing design portfolio showcase" loading="lazy" decoding="async" srcset="assets/optimized/475c29327cdfbc1c-480.webp 480w, assets/optimized/475c29327cdfbc1c-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" /></noscript>
           <div class="caption">CLOTHING DESIGN</div>
         </a>
       </article>
       <article class="thumbnail">
-        <a href="work-detailwedding.html"><img src="assets/optimized/d92c7d3d3d96faa1-750.webp"
-            alt="Wedding portfolio showcase" loading="lazy" decoding="async" srcset="assets/optimized/d92c7d3d3d96faa1-480.webp 480w, assets/optimized/d92c7d3d3d96faa1-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" />
+        <a href="work-detailwedding.html"><img data-src="assets/optimized/d92c7d3d3d96faa1-750.webp"
+            alt="Wedding portfolio showcase" loading="lazy" decoding="async" data-srcset="assets/optimized/d92c7d3d3d96faa1-480.webp 480w, assets/optimized/d92c7d3d3d96faa1-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27750%27%20height%3D%27750%27%2F%3E" /><noscript><img src="assets/optimized/d92c7d3d3d96faa1-750.webp"
+            alt="Wedding portfolio showcase" loading="lazy" decoding="async" srcset="assets/optimized/d92c7d3d3d96faa1-480.webp 480w, assets/optimized/d92c7d3d3d96faa1-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" /></noscript>
           <div class="caption">WEDDING</div>
         </a>
       </article>
@@ -183,7 +184,7 @@
     <div class="footer-container">
       <div class="footer-logo-container">
         <a href="index.html" aria-label="HEIF Artist Home" class="logo-link">
-          <img src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo" loading="lazy" decoding="async" srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596" />
+          <img data-src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo lazy-image" loading="lazy" decoding="async" data-srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272550%27%20height%3D%27596%27%2F%3E" /><noscript><img src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo" loading="lazy" decoding="async" srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596" /></noscript>
         </a>
       </div>
       <div class="footer-home">
@@ -204,19 +205,17 @@
     </div>
   </footer>
 
-  
   <!-- Abstracted section popups (Must be on relative body so 3D transforms on .hero1 don't break strict X/Y mouse positioning) -->
   <div class="hover-image" id="hover-image-1" aria-hidden="true">
-    <img src="assets/optimized/7a1eee7cc852a68e-1500.webp" alt="Tattoo Image 1" loading="lazy" decoding="async" srcset="assets/optimized/7a1eee7cc852a68e-480.webp 480w, assets/optimized/7a1eee7cc852a68e-960.webp 960w, assets/optimized/7a1eee7cc852a68e-1500.webp 1500w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1500" height="1500" />
+    <img data-src="assets/optimized/7a1eee7cc852a68e-1500.webp" alt="Tattoo Image 1" loading="lazy" decoding="async" data-srcset="assets/optimized/7a1eee7cc852a68e-480.webp 480w, assets/optimized/7a1eee7cc852a68e-960.webp 960w, assets/optimized/7a1eee7cc852a68e-1500.webp 1500w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1500" height="1500" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271500%27%20height%3D%271500%27%2F%3E" /><noscript><img src="assets/optimized/7a1eee7cc852a68e-1500.webp" alt="Tattoo Image 1" loading="lazy" decoding="async" srcset="assets/optimized/7a1eee7cc852a68e-480.webp 480w, assets/optimized/7a1eee7cc852a68e-960.webp 960w, assets/optimized/7a1eee7cc852a68e-1500.webp 1500w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1500" height="1500" /></noscript>
   </div>
   <div class="hover-image" id="hover-image-2" aria-hidden="true">
-    <img src="assets/optimized/7521c19f68739609-1600.webp" alt="Tattoo Image 2" loading="lazy" decoding="async" srcset="assets/optimized/7521c19f68739609-480.webp 480w, assets/optimized/7521c19f68739609-960.webp 960w, assets/optimized/7521c19f68739609-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="2568" height="2568" />
+    <img data-src="assets/optimized/7521c19f68739609-1600.webp" alt="Tattoo Image 2" loading="lazy" decoding="async" data-srcset="assets/optimized/7521c19f68739609-480.webp 480w, assets/optimized/7521c19f68739609-960.webp 960w, assets/optimized/7521c19f68739609-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="2568" height="2568" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272568%27%20height%3D%272568%27%2F%3E" /><noscript><img src="assets/optimized/7521c19f68739609-1600.webp" alt="Tattoo Image 2" loading="lazy" decoding="async" srcset="assets/optimized/7521c19f68739609-480.webp 480w, assets/optimized/7521c19f68739609-960.webp 960w, assets/optimized/7521c19f68739609-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="2568" height="2568" /></noscript>
   </div>
   <div class="hover-image" id="hover-image-3" aria-hidden="true">
-    <img src="assets/optimized/b8c19d8ec1d7cc53-1500.webp" alt="Tattoo Image 3" loading="lazy" decoding="async" srcset="assets/optimized/b8c19d8ec1d7cc53-480.webp 480w, assets/optimized/b8c19d8ec1d7cc53-960.webp 960w, assets/optimized/b8c19d8ec1d7cc53-1500.webp 1500w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1500" height="1500" />
+    <img data-src="assets/optimized/b8c19d8ec1d7cc53-1500.webp" alt="Tattoo Image 3" loading="lazy" decoding="async" data-srcset="assets/optimized/b8c19d8ec1d7cc53-480.webp 480w, assets/optimized/b8c19d8ec1d7cc53-960.webp 960w, assets/optimized/b8c19d8ec1d7cc53-1500.webp 1500w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1500" height="1500" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271500%27%20height%3D%271500%27%2F%3E" /><noscript><img src="assets/optimized/b8c19d8ec1d7cc53-1500.webp" alt="Tattoo Image 3" loading="lazy" decoding="async" srcset="assets/optimized/b8c19d8ec1d7cc53-480.webp 480w, assets/optimized/b8c19d8ec1d7cc53-960.webp 960w, assets/optimized/b8c19d8ec1d7cc53-1500.webp 1500w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1500" height="1500" /></noscript>
   </div>
 
-  
 </body>
 
 </html>

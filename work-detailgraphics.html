@@ -21,25 +21,22 @@
     <meta property="og:site_name" content="HEIF Artist">
 
     <!-- Preconnect for Performance (Google Fonts) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/img/logow.png">
     <link rel="apple-touch-icon" href="assets/img/logow.png">
 
-    <link rel="stylesheet" href="assets/css/css.css">
-    <link rel="stylesheet" href="assets/css/masonry.css">
-    <link rel="stylesheet" href="assets/css/cursor.css">
-    <script src="assets/vendor/three.min.js" defer></script>
-    <script src="assets/vendor/gsap.min.js" defer></script>
-    <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
-    <script src="assets/vendor/lenis.min.js" defer></script>
-    <script src="assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="assets/css/css.css?v=20261026-speed2">
+    <link rel="stylesheet" href="assets/css/masonry.css?v=20261026-speed2">
+    <link rel="stylesheet" href="assets/css/cursor.css?v=20261026-speed2">
 
-    <script src="assets/js/scroll-animations.js" defer></script>
-    <script src="assets/js/particles-effect.js" defer></script>
-<link rel="stylesheet" href="assets/css/performance.css">
+    <script src="assets/js/script.js?v=20261026-speed2" defer></script>
+
+    <script src="assets/js/scroll-animations.js?v=20261026-speed2" defer></script>
+
+<link rel="stylesheet" href="assets/css/performance.css?v=20261026-speed2">
+<script src="assets/js/image-delivery.js?v=20261026-speed2" defer></script>
+<noscript><style>.lazy-image{display:none!important}</style></noscript>
 </head>
 
 <body>
@@ -48,9 +45,6 @@
     <div class="scroll-tracker"></div>
 
     <!-- Preloader -->
-    
-
-    <canvas id="webgl-canvas"></canvas>
 
     <div class="stars-layer">
         <div class="stars-extra"></div>
@@ -94,40 +88,57 @@
             </section>
             <section class="image-showcase" aria-label="Graphic design gallery">
                 <div class="masonry-container">
-                    <div class="image-item"><img width="9000" height="3275" src="assets/optimized/abe7ace1090f0d9e-1600.webp"
-                            alt="Graphic design 1" loading="lazy" decoding="async" srcset="assets/optimized/abe7ace1090f0d9e-480.webp 480w, assets/optimized/abe7ace1090f0d9e-960.webp 960w, assets/optimized/abe7ace1090f0d9e-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></div>
-                    <div class="image-item"><img width="9000" height="3275" src="assets/optimized/0e7bba45b9e0b3d7-1600.webp"
-                            alt="Graphic design 2" loading="lazy" decoding="async" srcset="assets/optimized/0e7bba45b9e0b3d7-480.webp 480w, assets/optimized/0e7bba45b9e0b3d7-960.webp 960w, assets/optimized/0e7bba45b9e0b3d7-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></div>
-                    <div class="image-item"><img width="1712" height="1000" src="assets/optimized/8273692aad8abb2f-1600.webp"
-                            alt="Graphic design 3" loading="lazy" decoding="async" srcset="assets/optimized/8273692aad8abb2f-480.webp 480w, assets/optimized/8273692aad8abb2f-960.webp 960w, assets/optimized/8273692aad8abb2f-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></div>
-                    <div class="image-item"><img width="1518" height="806" src="assets/optimized/d245383373275757-1518.webp"
-                            alt="Graphic design 4" loading="lazy" decoding="async" srcset="assets/optimized/d245383373275757-480.webp 480w, assets/optimized/d245383373275757-960.webp 960w, assets/optimized/d245383373275757-1518.webp 1518w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></div>
-                    <div class="image-item"><img width="1469" height="923" src="assets/optimized/4f77d1bae505c734-1469.webp"
-                            alt="Graphic design 5" loading="lazy" decoding="async" srcset="assets/optimized/4f77d1bae505c734-480.webp 480w, assets/optimized/4f77d1bae505c734-960.webp 960w, assets/optimized/4f77d1bae505c734-1469.webp 1469w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></div>
-                    <div class="image-item"><img width="2221" height="1280" src="assets/optimized/a2818ae3cda00f73-1600.webp"
-                            alt="Graphic design 6" loading="lazy" decoding="async" srcset="assets/optimized/a2818ae3cda00f73-480.webp 480w, assets/optimized/a2818ae3cda00f73-960.webp 960w, assets/optimized/a2818ae3cda00f73-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></div>
-                    <div class="image-item"><img width="3240" height="1215" src="assets/optimized/aa8b9a18e5b0ef4d-1600.webp"
-                            alt="Graphic design 7" loading="lazy" decoding="async" srcset="assets/optimized/aa8b9a18e5b0ef4d-480.webp 480w, assets/optimized/aa8b9a18e5b0ef4d-960.webp 960w, assets/optimized/aa8b9a18e5b0ef4d-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></div>
-                    <div class="image-item"><img width="3240" height="2192" src="assets/optimized/63c1934b478881b9-1600.webp"
-                            alt="Graphic design 8" loading="lazy" decoding="async" srcset="assets/optimized/63c1934b478881b9-480.webp 480w, assets/optimized/63c1934b478881b9-960.webp 960w, assets/optimized/63c1934b478881b9-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></div>
-                    <div class="image-item"><img width="3240" height="2192" src="assets/optimized/56766211a721100b-1600.webp"
-                            alt="Graphic design 9" loading="lazy" decoding="async" srcset="assets/optimized/56766211a721100b-480.webp 480w, assets/optimized/56766211a721100b-960.webp 960w, assets/optimized/56766211a721100b-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></div>
-                    <div class="image-item"><img width="3240" height="1215" src="assets/optimized/a2d0433ed096da33-1600.webp"
-                            alt="Graphic design 10" loading="lazy" decoding="async" srcset="assets/optimized/a2d0433ed096da33-480.webp 480w, assets/optimized/a2d0433ed096da33-960.webp 960w, assets/optimized/a2d0433ed096da33-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></div>
-                    <div class="image-item"><img width="3240" height="1215" src="assets/optimized/c207efffe585695d-1600.webp"
-                            alt="Graphic design 11" loading="lazy" decoding="async" srcset="assets/optimized/c207efffe585695d-480.webp 480w, assets/optimized/c207efffe585695d-960.webp 960w, assets/optimized/c207efffe585695d-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></div>
-                    <div class="image-item"><img width="2892" height="2192" src="assets/optimized/06eb4e6a80f353a3-1600.webp"
-                            alt="Graphic design 12" loading="lazy" decoding="async" srcset="assets/optimized/06eb4e6a80f353a3-480.webp 480w, assets/optimized/06eb4e6a80f353a3-960.webp 960w, assets/optimized/06eb4e6a80f353a3-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></div>
-                    <div class="image-item"><img width="3240" height="1215" src="assets/optimized/9eaec78ba93b1007-1600.webp"
-                            alt="Graphic design 13" loading="lazy" decoding="async" srcset="assets/optimized/9eaec78ba93b1007-480.webp 480w, assets/optimized/9eaec78ba93b1007-960.webp 960w, assets/optimized/9eaec78ba93b1007-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></div>
-                    <div class="image-item"><img width="5354" height="2192" src="assets/optimized/495d6ad4840c73d4-1600.webp"
-                            alt="Graphic design 14" loading="lazy" decoding="async" srcset="assets/optimized/495d6ad4840c73d4-480.webp 480w, assets/optimized/495d6ad4840c73d4-960.webp 960w, assets/optimized/495d6ad4840c73d4-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></div>
-                    <div class="image-item"><img width="3119" height="1885" src="assets/optimized/b60e4e0eafed52ff-1600.webp"
-                            alt="Graphic design 15" loading="lazy" decoding="async" srcset="assets/optimized/b60e4e0eafed52ff-480.webp 480w, assets/optimized/b60e4e0eafed52ff-960.webp 960w, assets/optimized/b60e4e0eafed52ff-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></div>
-                    <div class="image-item"><img width="5281" height="2927" src="assets/optimized/74c42d49d0636204-1600.webp"
-                            alt="Graphic design 16" loading="lazy" decoding="async" srcset="assets/optimized/74c42d49d0636204-480.webp 480w, assets/optimized/74c42d49d0636204-960.webp 960w, assets/optimized/74c42d49d0636204-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></div>
-                    <div class="image-item"><img width="5614" height="2227" src="assets/optimized/6b1b43ae544e52d1-1600.webp"
-                            alt="Graphic design 17" loading="lazy" decoding="async" srcset="assets/optimized/6b1b43ae544e52d1-480.webp 480w, assets/optimized/6b1b43ae544e52d1-960.webp 960w, assets/optimized/6b1b43ae544e52d1-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></div>
+                    <div class="image-item"><img width="9000" height="3275" data-src="assets/optimized/abe7ace1090f0d9e-1600.webp"
+                            alt="Graphic design 1" loading="lazy" decoding="async" data-srcset="assets/optimized/abe7ace1090f0d9e-480.webp 480w, assets/optimized/abe7ace1090f0d9e-960.webp 960w, assets/optimized/abe7ace1090f0d9e-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%279000%27%20height%3D%273275%27%2F%3E"><noscript><img width="9000" height="3275" src="assets/optimized/abe7ace1090f0d9e-1600.webp"
+                            alt="Graphic design 1" loading="lazy" decoding="async" srcset="assets/optimized/abe7ace1090f0d9e-480.webp 480w, assets/optimized/abe7ace1090f0d9e-960.webp 960w, assets/optimized/abe7ace1090f0d9e-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></noscript></div>
+                    <div class="image-item"><img width="9000" height="3275" data-src="assets/optimized/0e7bba45b9e0b3d7-1600.webp"
+                            alt="Graphic design 2" loading="lazy" decoding="async" data-srcset="assets/optimized/0e7bba45b9e0b3d7-480.webp 480w, assets/optimized/0e7bba45b9e0b3d7-960.webp 960w, assets/optimized/0e7bba45b9e0b3d7-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%279000%27%20height%3D%273275%27%2F%3E"><noscript><img width="9000" height="3275" src="assets/optimized/0e7bba45b9e0b3d7-1600.webp"
+                            alt="Graphic design 2" loading="lazy" decoding="async" srcset="assets/optimized/0e7bba45b9e0b3d7-480.webp 480w, assets/optimized/0e7bba45b9e0b3d7-960.webp 960w, assets/optimized/0e7bba45b9e0b3d7-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></noscript></div>
+                    <div class="image-item"><img width="1712" height="1000" data-src="assets/optimized/8273692aad8abb2f-1600.webp"
+                            alt="Graphic design 3" loading="lazy" decoding="async" data-srcset="assets/optimized/8273692aad8abb2f-480.webp 480w, assets/optimized/8273692aad8abb2f-960.webp 960w, assets/optimized/8273692aad8abb2f-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271712%27%20height%3D%271000%27%2F%3E"><noscript><img width="1712" height="1000" src="assets/optimized/8273692aad8abb2f-1600.webp"
+                            alt="Graphic design 3" loading="lazy" decoding="async" srcset="assets/optimized/8273692aad8abb2f-480.webp 480w, assets/optimized/8273692aad8abb2f-960.webp 960w, assets/optimized/8273692aad8abb2f-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></noscript></div>
+                    <div class="image-item"><img width="1518" height="806" data-src="assets/optimized/d245383373275757-1518.webp"
+                            alt="Graphic design 4" loading="lazy" decoding="async" data-srcset="assets/optimized/d245383373275757-480.webp 480w, assets/optimized/d245383373275757-960.webp 960w, assets/optimized/d245383373275757-1518.webp 1518w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271518%27%20height%3D%27806%27%2F%3E"><noscript><img width="1518" height="806" src="assets/optimized/d245383373275757-1518.webp"
+                            alt="Graphic design 4" loading="lazy" decoding="async" srcset="assets/optimized/d245383373275757-480.webp 480w, assets/optimized/d245383373275757-960.webp 960w, assets/optimized/d245383373275757-1518.webp 1518w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></noscript></div>
+                    <div class="image-item"><img width="1469" height="923" data-src="assets/optimized/4f77d1bae505c734-1469.webp"
+                            alt="Graphic design 5" loading="lazy" decoding="async" data-srcset="assets/optimized/4f77d1bae505c734-480.webp 480w, assets/optimized/4f77d1bae505c734-960.webp 960w, assets/optimized/4f77d1bae505c734-1469.webp 1469w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271469%27%20height%3D%27923%27%2F%3E"><noscript><img width="1469" height="923" src="assets/optimized/4f77d1bae505c734-1469.webp"
+                            alt="Graphic design 5" loading="lazy" decoding="async" srcset="assets/optimized/4f77d1bae505c734-480.webp 480w, assets/optimized/4f77d1bae505c734-960.webp 960w, assets/optimized/4f77d1bae505c734-1469.webp 1469w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></noscript></div>
+                    <div class="image-item"><img width="2221" height="1280" data-src="assets/optimized/a2818ae3cda00f73-1600.webp"
+                            alt="Graphic design 6" loading="lazy" decoding="async" data-srcset="assets/optimized/a2818ae3cda00f73-480.webp 480w, assets/optimized/a2818ae3cda00f73-960.webp 960w, assets/optimized/a2818ae3cda00f73-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272221%27%20height%3D%271280%27%2F%3E"><noscript><img width="2221" height="1280" src="assets/optimized/a2818ae3cda00f73-1600.webp"
+                            alt="Graphic design 6" loading="lazy" decoding="async" srcset="assets/optimized/a2818ae3cda00f73-480.webp 480w, assets/optimized/a2818ae3cda00f73-960.webp 960w, assets/optimized/a2818ae3cda00f73-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></noscript></div>
+                    <div class="image-item"><img width="3240" height="1215" data-src="assets/optimized/aa8b9a18e5b0ef4d-1600.webp"
+                            alt="Graphic design 7" loading="lazy" decoding="async" data-srcset="assets/optimized/aa8b9a18e5b0ef4d-480.webp 480w, assets/optimized/aa8b9a18e5b0ef4d-960.webp 960w, assets/optimized/aa8b9a18e5b0ef4d-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%273240%27%20height%3D%271215%27%2F%3E"><noscript><img width="3240" height="1215" src="assets/optimized/aa8b9a18e5b0ef4d-1600.webp"
+                            alt="Graphic design 7" loading="lazy" decoding="async" srcset="assets/optimized/aa8b9a18e5b0ef4d-480.webp 480w, assets/optimized/aa8b9a18e5b0ef4d-960.webp 960w, assets/optimized/aa8b9a18e5b0ef4d-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></noscript></div>
+                    <div class="image-item"><img width="3240" height="2192" data-src="assets/optimized/63c1934b478881b9-1600.webp"
+                            alt="Graphic design 8" loading="lazy" decoding="async" data-srcset="assets/optimized/63c1934b478881b9-480.webp 480w, assets/optimized/63c1934b478881b9-960.webp 960w, assets/optimized/63c1934b478881b9-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%273240%27%20height%3D%272192%27%2F%3E"><noscript><img width="3240" height="2192" src="assets/optimized/63c1934b478881b9-1600.webp"
+                            alt="Graphic design 8" loading="lazy" decoding="async" srcset="assets/optimized/63c1934b478881b9-480.webp 480w, assets/optimized/63c1934b478881b9-960.webp 960w, assets/optimized/63c1934b478881b9-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></noscript></div>
+                    <div class="image-item"><img width="3240" height="2192" data-src="assets/optimized/56766211a721100b-1600.webp"
+                            alt="Graphic design 9" loading="lazy" decoding="async" data-srcset="assets/optimized/56766211a721100b-480.webp 480w, assets/optimized/56766211a721100b-960.webp 960w, assets/optimized/56766211a721100b-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%273240%27%20height%3D%272192%27%2F%3E"><noscript><img width="3240" height="2192" src="assets/optimized/56766211a721100b-1600.webp"
+                            alt="Graphic design 9" loading="lazy" decoding="async" srcset="assets/optimized/56766211a721100b-480.webp 480w, assets/optimized/56766211a721100b-960.webp 960w, assets/optimized/56766211a721100b-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></noscript></div>
+                    <div class="image-item"><img width="3240" height="1215" data-src="assets/optimized/a2d0433ed096da33-1600.webp"
+                            alt="Graphic design 10" loading="lazy" decoding="async" data-srcset="assets/optimized/a2d0433ed096da33-480.webp 480w, assets/optimized/a2d0433ed096da33-960.webp 960w, assets/optimized/a2d0433ed096da33-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%273240%27%20height%3D%271215%27%2F%3E"><noscript><img width="3240" height="1215" src="assets/optimized/a2d0433ed096da33-1600.webp"
+                            alt="Graphic design 10" loading="lazy" decoding="async" srcset="assets/optimized/a2d0433ed096da33-480.webp 480w, assets/optimized/a2d0433ed096da33-960.webp 960w, assets/optimized/a2d0433ed096da33-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></noscript></div>
+                    <div class="image-item"><img width="3240" height="1215" data-src="assets/optimized/c207efffe585695d-1600.webp"
+                            alt="Graphic design 11" loading="lazy" decoding="async" data-srcset="assets/optimized/c207efffe585695d-480.webp 480w, assets/optimized/c207efffe585695d-960.webp 960w, assets/optimized/c207efffe585695d-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%273240%27%20height%3D%271215%27%2F%3E"><noscript><img width="3240" height="1215" src="assets/optimized/c207efffe585695d-1600.webp"
+                            alt="Graphic design 11" loading="lazy" decoding="async" srcset="assets/optimized/c207efffe585695d-480.webp 480w, assets/optimized/c207efffe585695d-960.webp 960w, assets/optimized/c207efffe585695d-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></noscript></div>
+                    <div class="image-item"><img width="2892" height="2192" data-src="assets/optimized/06eb4e6a80f353a3-1600.webp"
+                            alt="Graphic design 12" loading="lazy" decoding="async" data-srcset="assets/optimized/06eb4e6a80f353a3-480.webp 480w, assets/optimized/06eb4e6a80f353a3-960.webp 960w, assets/optimized/06eb4e6a80f353a3-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272892%27%20height%3D%272192%27%2F%3E"><noscript><img width="2892" height="2192" src="assets/optimized/06eb4e6a80f353a3-1600.webp"
+                            alt="Graphic design 12" loading="lazy" decoding="async" srcset="assets/optimized/06eb4e6a80f353a3-480.webp 480w, assets/optimized/06eb4e6a80f353a3-960.webp 960w, assets/optimized/06eb4e6a80f353a3-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></noscript></div>
+                    <div class="image-item"><img width="3240" height="1215" data-src="assets/optimized/9eaec78ba93b1007-1600.webp"
+                            alt="Graphic design 13" loading="lazy" decoding="async" data-srcset="assets/optimized/9eaec78ba93b1007-480.webp 480w, assets/optimized/9eaec78ba93b1007-960.webp 960w, assets/optimized/9eaec78ba93b1007-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%273240%27%20height%3D%271215%27%2F%3E"><noscript><img width="3240" height="1215" src="assets/optimized/9eaec78ba93b1007-1600.webp"
+                            alt="Graphic design 13" loading="lazy" decoding="async" srcset="assets/optimized/9eaec78ba93b1007-480.webp 480w, assets/optimized/9eaec78ba93b1007-960.webp 960w, assets/optimized/9eaec78ba93b1007-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></noscript></div>
+                    <div class="image-item"><img width="5354" height="2192" data-src="assets/optimized/495d6ad4840c73d4-1600.webp"
+                            alt="Graphic design 14" loading="lazy" decoding="async" data-srcset="assets/optimized/495d6ad4840c73d4-480.webp 480w, assets/optimized/495d6ad4840c73d4-960.webp 960w, assets/optimized/495d6ad4840c73d4-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%275354%27%20height%3D%272192%27%2F%3E"><noscript><img width="5354" height="2192" src="assets/optimized/495d6ad4840c73d4-1600.webp"
+                            alt="Graphic design 14" loading="lazy" decoding="async" srcset="assets/optimized/495d6ad4840c73d4-480.webp 480w, assets/optimized/495d6ad4840c73d4-960.webp 960w, assets/optimized/495d6ad4840c73d4-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></noscript></div>
+                    <div class="image-item"><img width="3119" height="1885" data-src="assets/optimized/b60e4e0eafed52ff-1600.webp"
+                            alt="Graphic design 15" loading="lazy" decoding="async" data-srcset="assets/optimized/b60e4e0eafed52ff-480.webp 480w, assets/optimized/b60e4e0eafed52ff-960.webp 960w, assets/optimized/b60e4e0eafed52ff-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%273119%27%20height%3D%271885%27%2F%3E"><noscript><img width="3119" height="1885" src="assets/optimized/b60e4e0eafed52ff-1600.webp"
+                            alt="Graphic design 15" loading="lazy" decoding="async" srcset="assets/optimized/b60e4e0eafed52ff-480.webp 480w, assets/optimized/b60e4e0eafed52ff-960.webp 960w, assets/optimized/b60e4e0eafed52ff-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></noscript></div>
+                    <div class="image-item"><img width="5281" height="2927" data-src="assets/optimized/74c42d49d0636204-1600.webp"
+                            alt="Graphic design 16" loading="lazy" decoding="async" data-srcset="assets/optimized/74c42d49d0636204-480.webp 480w, assets/optimized/74c42d49d0636204-960.webp 960w, assets/optimized/74c42d49d0636204-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%275281%27%20height%3D%272927%27%2F%3E"><noscript><img width="5281" height="2927" src="assets/optimized/74c42d49d0636204-1600.webp"
+                            alt="Graphic design 16" loading="lazy" decoding="async" srcset="assets/optimized/74c42d49d0636204-480.webp 480w, assets/optimized/74c42d49d0636204-960.webp 960w, assets/optimized/74c42d49d0636204-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></noscript></div>
+                    <div class="image-item"><img width="5614" height="2227" data-src="assets/optimized/6b1b43ae544e52d1-1600.webp"
+                            alt="Graphic design 17" loading="lazy" decoding="async" data-srcset="assets/optimized/6b1b43ae544e52d1-480.webp 480w, assets/optimized/6b1b43ae544e52d1-960.webp 960w, assets/optimized/6b1b43ae544e52d1-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%275614%27%20height%3D%272227%27%2F%3E"><noscript><img width="5614" height="2227" src="assets/optimized/6b1b43ae544e52d1-1600.webp"
+                            alt="Graphic design 17" loading="lazy" decoding="async" srcset="assets/optimized/6b1b43ae544e52d1-480.webp 480w, assets/optimized/6b1b43ae544e52d1-960.webp 960w, assets/optimized/6b1b43ae544e52d1-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"></noscript></div>
                 </div>
             </section>
         </div>
@@ -138,8 +149,9 @@
         <div class="footer-container">
             <div class="footer-logo-container">
                 <a href="index.html" aria-label="HEIF Artist Home">
-                    <img src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo" loading="lazy"
-                        decoding="async" srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596">
+                    <img data-src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo lazy-image" loading="lazy"
+                        decoding="async" data-srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272550%27%20height%3D%27596%27%2F%3E"><noscript><img src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo" loading="lazy"
+                        decoding="async" srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596"></noscript>
                 </a>
             </div>
             <div class="footer-home">
@@ -157,11 +169,6 @@
                     target="_blank" rel="noopener noreferrer">Jayesh Mepani</a></p>
         </div>
     </footer>
-
-    
-    
-    
-    
 
 </body>
 

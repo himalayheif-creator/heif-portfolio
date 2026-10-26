@@ -22,25 +22,22 @@
     <meta property="og:site_name" content="HEIF Artist">
 
     <!-- Preconnect for Performance (Google Fonts) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/img/logow.png">
     <link rel="apple-touch-icon" href="assets/img/logow.png">
 
-    <link rel="stylesheet" href="assets/css/css.css">
-    <link rel="stylesheet" href="assets/css/masonry.css">
-    <link rel="stylesheet" href="assets/css/cursor.css">
-    <script src="assets/vendor/three.min.js" defer></script>
-    <script src="assets/vendor/gsap.min.js" defer></script>
-    <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
-    <script src="assets/vendor/lenis.min.js" defer></script>
-    <script src="assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="assets/css/css.css?v=20261026-speed2">
+    <link rel="stylesheet" href="assets/css/masonry.css?v=20261026-speed2">
+    <link rel="stylesheet" href="assets/css/cursor.css?v=20261026-speed2">
 
-    <script src="assets/js/scroll-animations.js" defer></script>
-    <script src="assets/js/particles-effect.js" defer></script>
-<link rel="stylesheet" href="assets/css/performance.css">
+    <script src="assets/js/script.js?v=20261026-speed2" defer></script>
+
+    <script src="assets/js/scroll-animations.js?v=20261026-speed2" defer></script>
+
+<link rel="stylesheet" href="assets/css/performance.css?v=20261026-speed2">
+<script src="assets/js/image-delivery.js?v=20261026-speed2" defer></script>
+<noscript><style>.lazy-image{display:none!important}</style></noscript>
 </head>
 
 <body>
@@ -49,9 +46,6 @@
     <div class="scroll-tracker"></div>
 
     <!-- Preloader -->
-    
-
-    <canvas id="webgl-canvas"></canvas>
 
     <div class="stars-layer">
         <div class="stars-extra"></div>
@@ -494,8 +488,9 @@
         <div class="footer-container">
             <div class="footer-logo-container">
                 <a href="index.html" aria-label="HEIF Artist Home">
-                    <img src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo" loading="lazy"
-                        decoding="async" srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596">
+                    <img data-src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo lazy-image" loading="lazy"
+                        decoding="async" data-srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272550%27%20height%3D%27596%27%2F%3E"><noscript><img src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo" loading="lazy"
+                        decoding="async" srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596"></noscript>
                 </a>
             </div>
             <div class="footer-home">
@@ -515,8 +510,8 @@
     </footer>
 
     <!-- Scripts with defer for performance -->
-    <script src="assets/js/video.js" defer></script>
-    
+    <script src="assets/js/video.js?v=20261026-speed2" defer></script>
+
 </body>
 
 </html>

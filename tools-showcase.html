@@ -17,26 +17,23 @@
     content="Professional graphic designer and video editor transforming your visuals into masterpieces." />
 	<meta property="og:image" content="assets/img/logo-full.png" />
   <meta property="og:site_name" content="HEIF Artist" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="icon" type="image/png" href="assets/img/logow.png" />
   <link rel="apple-touch-icon" href="assets/img/logow.png" />
-  <link rel="stylesheet" href="assets/css/css.css" />
-  <link rel="stylesheet" href="assets/css/cursor.css" />
-  <link rel="stylesheet" href="assets/css/tools-showcase.css" />
-  <script src="assets/vendor/three.min.js" defer></script>
-  <script src="assets/vendor/gsap.min.js" defer></script>
-  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
-  <script src="assets/vendor/lenis.min.js" defer></script>
-  <script src="assets/js/script.js" defer></script>
-  <script src="assets/js/scroll-animations.js" defer></script>
-  <script src="assets/js/particles-effect.js" defer></script>
-<link rel="stylesheet" href="assets/css/performance.css">
+  <link rel="stylesheet" href="assets/css/css.css?v=20261026-speed2" />
+  <link rel="stylesheet" href="assets/css/cursor.css?v=20261026-speed2" />
+  <link rel="stylesheet" href="assets/css/tools-showcase.css?v=20261026-speed2" />
+
+  <script src="assets/js/script.js?v=20261026-speed2" defer></script>
+  <script src="assets/js/scroll-animations.js?v=20261026-speed2" defer></script>
+
+<link rel="stylesheet" href="assets/css/performance.css?v=20261026-speed2">
+<script src="assets/js/image-delivery.js?v=20261026-speed2" defer></script>
+<noscript><style>.lazy-image{display:none!important}</style></noscript>
 </head>
 
 <body id="home-page"><a href="#main-content" class="skip-link">Skip to main content</a>
   <div class="scroll-tracker"></div>
-  <canvas id="webgl-canvas"></canvas>
+
   <div class="stars-layer">
     <div class="stars-extra"></div>
   </div>
@@ -59,12 +56,12 @@
   </header>
   <main id="main-content">
     <div class="showcase-canvas">
-      <div class="icon-3d" id="icon-ps"><img src="assets/optimized/1b57d191f6449b7a-960.webp" alt="Adobe Photoshop 3D Icon" srcset="assets/optimized/1b57d191f6449b7a-480.webp 480w, assets/optimized/1b57d191f6449b7a-960.webp 960w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="960" height="960" loading="lazy" decoding="async"></div>
-      <div class="icon-3d" id="icon-ai"><img src="assets/optimized/7d17c2a8777d95bd-1600.webp" alt="Adobe Illustrator 3D Icon" srcset="assets/optimized/7d17c2a8777d95bd-480.webp 480w, assets/optimized/7d17c2a8777d95bd-960.webp 960w, assets/optimized/7d17c2a8777d95bd-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="2094" height="1536" loading="lazy" decoding="async"></div>
-      <div class="icon-3d" id="icon-ae"><img src="assets/optimized/26737cecc2211481-640.webp" alt="Adobe After Effects 3D Icon" srcset="assets/optimized/26737cecc2211481-480.webp 480w, assets/optimized/26737cecc2211481-640.webp 640w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="640" height="640" loading="lazy" decoding="async"></div>
-      <div class="icon-3d" id="icon-pr"><img src="assets/optimized/c8fadb3c40558d02-1484.webp" alt="Adobe Premiere Pro 3D Icon" srcset="assets/optimized/c8fadb3c40558d02-480.webp 480w, assets/optimized/c8fadb3c40558d02-960.webp 960w, assets/optimized/c8fadb3c40558d02-1484.webp 1484w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1484" height="1484" loading="lazy" decoding="async"></div>
-      <div class="icon-3d" id="icon-dr"><img src="assets/optimized/f872eda4a734a431-1536.webp" alt="DaVinci Resolve 3D Icon" srcset="assets/optimized/f872eda4a734a431-480.webp 480w, assets/optimized/f872eda4a734a431-960.webp 960w, assets/optimized/f872eda4a734a431-1536.webp 1536w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1536" height="1024" loading="lazy" decoding="async"></div>
-      <div class="icon-3d" id="icon-fcp"><img src="assets/optimized/46bca3c97767cb9b-1600.webp" alt="Final Cut Pro 3D Icon" srcset="assets/optimized/46bca3c97767cb9b-480.webp 480w, assets/optimized/46bca3c97767cb9b-960.webp 960w, assets/optimized/46bca3c97767cb9b-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="2129" height="1536" loading="lazy" decoding="async"></div>
+      <div class="icon-3d" id="icon-ps"><img data-src="assets/optimized/1b57d191f6449b7a-960.webp" alt="Adobe Photoshop 3D Icon" data-srcset="assets/optimized/1b57d191f6449b7a-480.webp 480w, assets/optimized/1b57d191f6449b7a-960.webp 960w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="960" height="960" loading="lazy" decoding="async" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27960%27%20height%3D%27960%27%2F%3E"><noscript><img src="assets/optimized/1b57d191f6449b7a-960.webp" alt="Adobe Photoshop 3D Icon" srcset="assets/optimized/1b57d191f6449b7a-480.webp 480w, assets/optimized/1b57d191f6449b7a-960.webp 960w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="960" height="960" loading="lazy" decoding="async"></noscript></div>
+      <div class="icon-3d" id="icon-ai"><img data-src="assets/optimized/7d17c2a8777d95bd-1600.webp" alt="Adobe Illustrator 3D Icon" data-srcset="assets/optimized/7d17c2a8777d95bd-480.webp 480w, assets/optimized/7d17c2a8777d95bd-960.webp 960w, assets/optimized/7d17c2a8777d95bd-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="2094" height="1536" loading="lazy" decoding="async" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272094%27%20height%3D%271536%27%2F%3E"><noscript><img src="assets/optimized/7d17c2a8777d95bd-1600.webp" alt="Adobe Illustrator 3D Icon" srcset="assets/optimized/7d17c2a8777d95bd-480.webp 480w, assets/optimized/7d17c2a8777d95bd-960.webp 960w, assets/optimized/7d17c2a8777d95bd-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="2094" height="1536" loading="lazy" decoding="async"></noscript></div>
+      <div class="icon-3d" id="icon-ae"><img data-src="assets/optimized/26737cecc2211481-640.webp" alt="Adobe After Effects 3D Icon" data-srcset="assets/optimized/26737cecc2211481-480.webp 480w, assets/optimized/26737cecc2211481-640.webp 640w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="640" height="640" loading="lazy" decoding="async" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27640%27%20height%3D%27640%27%2F%3E"><noscript><img src="assets/optimized/26737cecc2211481-640.webp" alt="Adobe After Effects 3D Icon" srcset="assets/optimized/26737cecc2211481-480.webp 480w, assets/optimized/26737cecc2211481-640.webp 640w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="640" height="640" loading="lazy" decoding="async"></noscript></div>
+      <div class="icon-3d" id="icon-pr"><img data-src="assets/optimized/c8fadb3c40558d02-1484.webp" alt="Adobe Premiere Pro 3D Icon" data-srcset="assets/optimized/c8fadb3c40558d02-480.webp 480w, assets/optimized/c8fadb3c40558d02-960.webp 960w, assets/optimized/c8fadb3c40558d02-1484.webp 1484w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1484" height="1484" loading="lazy" decoding="async" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271484%27%20height%3D%271484%27%2F%3E"><noscript><img src="assets/optimized/c8fadb3c40558d02-1484.webp" alt="Adobe Premiere Pro 3D Icon" srcset="assets/optimized/c8fadb3c40558d02-480.webp 480w, assets/optimized/c8fadb3c40558d02-960.webp 960w, assets/optimized/c8fadb3c40558d02-1484.webp 1484w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1484" height="1484" loading="lazy" decoding="async"></noscript></div>
+      <div class="icon-3d" id="icon-dr"><img data-src="assets/optimized/f872eda4a734a431-1536.webp" alt="DaVinci Resolve 3D Icon" data-srcset="assets/optimized/f872eda4a734a431-480.webp 480w, assets/optimized/f872eda4a734a431-960.webp 960w, assets/optimized/f872eda4a734a431-1536.webp 1536w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1536" height="1024" loading="lazy" decoding="async" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271536%27%20height%3D%271024%27%2F%3E"><noscript><img src="assets/optimized/f872eda4a734a431-1536.webp" alt="DaVinci Resolve 3D Icon" srcset="assets/optimized/f872eda4a734a431-480.webp 480w, assets/optimized/f872eda4a734a431-960.webp 960w, assets/optimized/f872eda4a734a431-1536.webp 1536w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1536" height="1024" loading="lazy" decoding="async"></noscript></div>
+      <div class="icon-3d" id="icon-fcp"><img data-src="assets/optimized/46bca3c97767cb9b-1600.webp" alt="Final Cut Pro 3D Icon" data-srcset="assets/optimized/46bca3c97767cb9b-480.webp 480w, assets/optimized/46bca3c97767cb9b-960.webp 960w, assets/optimized/46bca3c97767cb9b-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="2129" height="1536" loading="lazy" decoding="async" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272129%27%20height%3D%271536%27%2F%3E"><noscript><img src="assets/optimized/46bca3c97767cb9b-1600.webp" alt="Final Cut Pro 3D Icon" srcset="assets/optimized/46bca3c97767cb9b-480.webp 480w, assets/optimized/46bca3c97767cb9b-960.webp 960w, assets/optimized/46bca3c97767cb9b-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="2129" height="1536" loading="lazy" decoding="async"></noscript></div>
     </div>
     <div class="scroll-content">
       <section class="sec-intro">
@@ -132,7 +129,8 @@
   <footer class="footer" role="contentinfo">
     <div class="footer-container">
       <div class="footer-logo-container"><a href="index.html" aria-label="HEIF Artist Home" class="logo-link"><img
-            src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo" loading="lazy" decoding="async" srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596" /></a>
+            data-src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo lazy-image" loading="lazy" decoding="async" data-srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272550%27%20height%3D%27596%27%2F%3E" /><noscript><img
+            src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo" loading="lazy" decoding="async" srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596" /></noscript></a>
       </div>
       <div class="footer-home"><a class="footer-btn home-btn" href="index.html">Home</a></div>
       <div class="footer-social-media"><a href="linktree.html" target="_blank" rel="noopener noreferrer">LINKTREE</a>
@@ -145,7 +143,7 @@
           target="_blank" rel="noopener noreferrer">Jayesh Mepani</a></p>
     </div>
   </footer>
-  
+
 </body>
 
 </html>

@@ -598,7 +598,7 @@ header nav ul li a:hover::after {
 
 .hover-text,
 .hero1 h2 span {
-    cursor: url('../ICONS WEB/Mouse_Cursor.svg') 16 16, pointer !important;
+    cursor: url('../optimized/cursor.png') 16 16, pointer !important;
 }
 
 * {
@@ -2564,7 +2564,7 @@ footer.footer {
     left: var(--mask-width);
     transform: translate(-50%, -50%);
     pointer-events: none;
-    background: url('../ICONS WEB/Mouse_Cursor.svg') no-repeat center;
+    background: url('../optimized/cursor.png') no-repeat center;
     background-size: contain;
     border: none;
     box-shadow: none;

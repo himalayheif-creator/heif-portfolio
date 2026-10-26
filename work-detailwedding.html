@@ -21,26 +21,23 @@
     <meta property="og:site_name" content="HEIF Artist">
 
     <!-- Preconnect for Performance (Google Fonts) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/img/logow.png">
     <link rel="apple-touch-icon" href="assets/img/logow.png">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/css.css">
-    <link rel="stylesheet" href="assets/css/masonry.css">
-    <link rel="stylesheet" href="assets/css/cursor.css">
-    <script src="assets/vendor/three.min.js" defer></script>
-    <script src="assets/vendor/gsap.min.js" defer></script>
-    <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
-    <script src="assets/vendor/lenis.min.js" defer></script>
-    <script src="assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="assets/css/css.css?v=20261026-speed2">
+    <link rel="stylesheet" href="assets/css/masonry.css?v=20261026-speed2">
+    <link rel="stylesheet" href="assets/css/cursor.css?v=20261026-speed2">
 
-    <script src="assets/js/scroll-animations.js" defer></script>
-    <script src="assets/js/particles-effect.js" defer></script>
-<link rel="stylesheet" href="assets/css/performance.css">
+    <script src="assets/js/script.js?v=20261026-speed2" defer></script>
+
+    <script src="assets/js/scroll-animations.js?v=20261026-speed2" defer></script>
+
+<link rel="stylesheet" href="assets/css/performance.css?v=20261026-speed2">
+<script src="assets/js/image-delivery.js?v=20261026-speed2" defer></script>
+<noscript><style>.lazy-image{display:none!important}</style></noscript>
 </head>
 
 <body>
@@ -49,9 +46,6 @@
     <div class="scroll-tracker"></div>
 
     <!-- Preloader -->
-    
-
-    <canvas id="webgl-canvas"></canvas>
 
     <div class="stars-layer">
         <div class="stars-extra"></div>
@@ -95,88 +89,109 @@
             </section>
             <section class="image-showcase" aria-label="Wedding gallery">
                 <div class="flex-container">
-                    <div class="image-item"><img src="assets/optimized/1d62ceabf864185d-800.webp" alt="Wedding 1" loading="lazy"
-                            decoding="async" srcset="assets/optimized/1d62ceabf864185d-480.webp 480w, assets/optimized/1d62ceabf864185d-800.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="800" height="1422">
+                    <div class="image-item"><img data-src="assets/optimized/1d62ceabf864185d-800.webp" alt="Wedding 1" loading="lazy"
+                            decoding="async" data-srcset="assets/optimized/1d62ceabf864185d-480.webp 480w, assets/optimized/1d62ceabf864185d-800.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="800" height="1422" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27800%27%20height%3D%271422%27%2F%3E"><noscript><img src="assets/optimized/1d62ceabf864185d-800.webp" alt="Wedding 1" loading="lazy"
+                            decoding="async" srcset="assets/optimized/1d62ceabf864185d-480.webp 480w, assets/optimized/1d62ceabf864185d-800.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="800" height="1422"></noscript>
                         <div class="image-overlay"><span class="image-overlay-text">STORY</span></div>
                     </div>
-                    <div class="image-item"><img src="assets/optimized/6191eda7fb8dca2f-800.webp" alt="Wedding 2" loading="lazy"
-                            decoding="async" srcset="assets/optimized/6191eda7fb8dca2f-480.webp 480w, assets/optimized/6191eda7fb8dca2f-800.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="800" height="1422">
+                    <div class="image-item"><img data-src="assets/optimized/6191eda7fb8dca2f-800.webp" alt="Wedding 2" loading="lazy"
+                            decoding="async" data-srcset="assets/optimized/6191eda7fb8dca2f-480.webp 480w, assets/optimized/6191eda7fb8dca2f-800.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="800" height="1422" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27800%27%20height%3D%271422%27%2F%3E"><noscript><img src="assets/optimized/6191eda7fb8dca2f-800.webp" alt="Wedding 2" loading="lazy"
+                            decoding="async" srcset="assets/optimized/6191eda7fb8dca2f-480.webp 480w, assets/optimized/6191eda7fb8dca2f-800.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="800" height="1422"></noscript>
                         <div class="image-overlay"><span class="image-overlay-text">STORY</span></div>
                     </div>
-                    <div class="image-item"><img src="assets/optimized/69badb7143337a3b-800.webp" alt="Wedding 3" loading="lazy"
-                            decoding="async" srcset="assets/optimized/69badb7143337a3b-480.webp 480w, assets/optimized/69badb7143337a3b-800.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="800" height="1422">
+                    <div class="image-item"><img data-src="assets/optimized/69badb7143337a3b-800.webp" alt="Wedding 3" loading="lazy"
+                            decoding="async" data-srcset="assets/optimized/69badb7143337a3b-480.webp 480w, assets/optimized/69badb7143337a3b-800.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="800" height="1422" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27800%27%20height%3D%271422%27%2F%3E"><noscript><img src="assets/optimized/69badb7143337a3b-800.webp" alt="Wedding 3" loading="lazy"
+                            decoding="async" srcset="assets/optimized/69badb7143337a3b-480.webp 480w, assets/optimized/69badb7143337a3b-800.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="800" height="1422"></noscript>
                         <div class="image-overlay"><span class="image-overlay-text">STORY</span></div>
                     </div>
-                    <div class="image-item"><img src="assets/optimized/3f944caef172bba8-800.webp" alt="Wedding 4" loading="lazy"
-                            decoding="async" srcset="assets/optimized/3f944caef172bba8-480.webp 480w, assets/optimized/3f944caef172bba8-800.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="800" height="1422">
+                    <div class="image-item"><img data-src="assets/optimized/3f944caef172bba8-800.webp" alt="Wedding 4" loading="lazy"
+                            decoding="async" data-srcset="assets/optimized/3f944caef172bba8-480.webp 480w, assets/optimized/3f944caef172bba8-800.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="800" height="1422" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27800%27%20height%3D%271422%27%2F%3E"><noscript><img src="assets/optimized/3f944caef172bba8-800.webp" alt="Wedding 4" loading="lazy"
+                            decoding="async" srcset="assets/optimized/3f944caef172bba8-480.webp 480w, assets/optimized/3f944caef172bba8-800.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="800" height="1422"></noscript>
                         <div class="image-overlay"><span class="image-overlay-text">STORY</span></div>
                     </div>
-                    <div class="image-item"><img src="assets/optimized/3d6810451fba5e96-800.webp" alt="Wedding 5" loading="lazy"
-                            decoding="async" srcset="assets/optimized/3d6810451fba5e96-480.webp 480w, assets/optimized/3d6810451fba5e96-800.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="800" height="1422">
+                    <div class="image-item"><img data-src="assets/optimized/3d6810451fba5e96-800.webp" alt="Wedding 5" loading="lazy"
+                            decoding="async" data-srcset="assets/optimized/3d6810451fba5e96-480.webp 480w, assets/optimized/3d6810451fba5e96-800.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="800" height="1422" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27800%27%20height%3D%271422%27%2F%3E"><noscript><img src="assets/optimized/3d6810451fba5e96-800.webp" alt="Wedding 5" loading="lazy"
+                            decoding="async" srcset="assets/optimized/3d6810451fba5e96-480.webp 480w, assets/optimized/3d6810451fba5e96-800.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="800" height="1422"></noscript>
                         <div class="image-overlay"><span class="image-overlay-text">STORY</span></div>
                     </div>
-                    <div class="image-item"><img src="assets/optimized/f10b3f05e7398050-800.webp" alt="Wedding 6" loading="lazy"
-                            decoding="async" srcset="assets/optimized/f10b3f05e7398050-480.webp 480w, assets/optimized/f10b3f05e7398050-800.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="800" height="1422">
+                    <div class="image-item"><img data-src="assets/optimized/f10b3f05e7398050-800.webp" alt="Wedding 6" loading="lazy"
+                            decoding="async" data-srcset="assets/optimized/f10b3f05e7398050-480.webp 480w, assets/optimized/f10b3f05e7398050-800.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="800" height="1422" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27800%27%20height%3D%271422%27%2F%3E"><noscript><img src="assets/optimized/f10b3f05e7398050-800.webp" alt="Wedding 6" loading="lazy"
+                            decoding="async" srcset="assets/optimized/f10b3f05e7398050-480.webp 480w, assets/optimized/f10b3f05e7398050-800.webp 800w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="800" height="1422"></noscript>
                         <div class="image-overlay"><span class="image-overlay-text">STORY</span></div>
                     </div>
-                    <div class="image-item"><img src="assets/optimized/52ea96d33d3571cf-1000.webp" alt="Wedding post 1"
-                            loading="lazy" decoding="async" srcset="assets/optimized/52ea96d33d3571cf-480.webp 480w, assets/optimized/52ea96d33d3571cf-960.webp 960w, assets/optimized/52ea96d33d3571cf-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                    <div class="image-item"><img data-src="assets/optimized/52ea96d33d3571cf-1000.webp" alt="Wedding post 1"
+                            loading="lazy" decoding="async" data-srcset="assets/optimized/52ea96d33d3571cf-480.webp 480w, assets/optimized/52ea96d33d3571cf-960.webp 960w, assets/optimized/52ea96d33d3571cf-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img src="assets/optimized/52ea96d33d3571cf-1000.webp" alt="Wedding post 1"
+                            loading="lazy" decoding="async" srcset="assets/optimized/52ea96d33d3571cf-480.webp 480w, assets/optimized/52ea96d33d3571cf-960.webp 960w, assets/optimized/52ea96d33d3571cf-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                         <div class="image-overlay"><span class="image-overlay-text">POST</span></div>
                     </div>
-                    <div class="image-item"><img src="assets/optimized/bdd63dcdd599e11e-1000.webp" alt="Wedding post 2"
-                            loading="lazy" decoding="async" srcset="assets/optimized/bdd63dcdd599e11e-480.webp 480w, assets/optimized/bdd63dcdd599e11e-960.webp 960w, assets/optimized/bdd63dcdd599e11e-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                    <div class="image-item"><img data-src="assets/optimized/bdd63dcdd599e11e-1000.webp" alt="Wedding post 2"
+                            loading="lazy" decoding="async" data-srcset="assets/optimized/bdd63dcdd599e11e-480.webp 480w, assets/optimized/bdd63dcdd599e11e-960.webp 960w, assets/optimized/bdd63dcdd599e11e-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img src="assets/optimized/bdd63dcdd599e11e-1000.webp" alt="Wedding post 2"
+                            loading="lazy" decoding="async" srcset="assets/optimized/bdd63dcdd599e11e-480.webp 480w, assets/optimized/bdd63dcdd599e11e-960.webp 960w, assets/optimized/bdd63dcdd599e11e-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                         <div class="image-overlay"><span class="image-overlay-text">POST</span></div>
                     </div>
-                    <div class="image-item"><img src="assets/optimized/6436f2d6fe1f7784-1000.webp" alt="Wedding post 3"
-                            loading="lazy" decoding="async" srcset="assets/optimized/6436f2d6fe1f7784-480.webp 480w, assets/optimized/6436f2d6fe1f7784-960.webp 960w, assets/optimized/6436f2d6fe1f7784-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                    <div class="image-item"><img data-src="assets/optimized/6436f2d6fe1f7784-1000.webp" alt="Wedding post 3"
+                            loading="lazy" decoding="async" data-srcset="assets/optimized/6436f2d6fe1f7784-480.webp 480w, assets/optimized/6436f2d6fe1f7784-960.webp 960w, assets/optimized/6436f2d6fe1f7784-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img src="assets/optimized/6436f2d6fe1f7784-1000.webp" alt="Wedding post 3"
+                            loading="lazy" decoding="async" srcset="assets/optimized/6436f2d6fe1f7784-480.webp 480w, assets/optimized/6436f2d6fe1f7784-960.webp 960w, assets/optimized/6436f2d6fe1f7784-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                         <div class="image-overlay"><span class="image-overlay-text">POST</span></div>
                     </div>
-                    <div class="image-item"><img src="assets/optimized/f3f98e1be301fe3b-1000.webp" alt="Wedding post 4"
-                            loading="lazy" decoding="async" srcset="assets/optimized/f3f98e1be301fe3b-480.webp 480w, assets/optimized/f3f98e1be301fe3b-960.webp 960w, assets/optimized/f3f98e1be301fe3b-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                    <div class="image-item"><img data-src="assets/optimized/f3f98e1be301fe3b-1000.webp" alt="Wedding post 4"
+                            loading="lazy" decoding="async" data-srcset="assets/optimized/f3f98e1be301fe3b-480.webp 480w, assets/optimized/f3f98e1be301fe3b-960.webp 960w, assets/optimized/f3f98e1be301fe3b-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img src="assets/optimized/f3f98e1be301fe3b-1000.webp" alt="Wedding post 4"
+                            loading="lazy" decoding="async" srcset="assets/optimized/f3f98e1be301fe3b-480.webp 480w, assets/optimized/f3f98e1be301fe3b-960.webp 960w, assets/optimized/f3f98e1be301fe3b-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                         <div class="image-overlay"><span class="image-overlay-text">POST</span></div>
                     </div>
-                    <div class="image-item"><img src="assets/optimized/940f7f6856969a48-1000.webp" alt="Wedding post 5"
-                            loading="lazy" decoding="async" srcset="assets/optimized/940f7f6856969a48-480.webp 480w, assets/optimized/940f7f6856969a48-960.webp 960w, assets/optimized/940f7f6856969a48-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                    <div class="image-item"><img data-src="assets/optimized/940f7f6856969a48-1000.webp" alt="Wedding post 5"
+                            loading="lazy" decoding="async" data-srcset="assets/optimized/940f7f6856969a48-480.webp 480w, assets/optimized/940f7f6856969a48-960.webp 960w, assets/optimized/940f7f6856969a48-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img src="assets/optimized/940f7f6856969a48-1000.webp" alt="Wedding post 5"
+                            loading="lazy" decoding="async" srcset="assets/optimized/940f7f6856969a48-480.webp 480w, assets/optimized/940f7f6856969a48-960.webp 960w, assets/optimized/940f7f6856969a48-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                         <div class="image-overlay"><span class="image-overlay-text">POST</span></div>
                     </div>
-                    <div class="image-item"><img src="assets/optimized/806a8ddcc507311f-1000.webp" alt="Wedding post 6"
-                            loading="lazy" decoding="async" srcset="assets/optimized/806a8ddcc507311f-480.webp 480w, assets/optimized/806a8ddcc507311f-960.webp 960w, assets/optimized/806a8ddcc507311f-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                    <div class="image-item"><img data-src="assets/optimized/806a8ddcc507311f-1000.webp" alt="Wedding post 6"
+                            loading="lazy" decoding="async" data-srcset="assets/optimized/806a8ddcc507311f-480.webp 480w, assets/optimized/806a8ddcc507311f-960.webp 960w, assets/optimized/806a8ddcc507311f-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img src="assets/optimized/806a8ddcc507311f-1000.webp" alt="Wedding post 6"
+                            loading="lazy" decoding="async" srcset="assets/optimized/806a8ddcc507311f-480.webp 480w, assets/optimized/806a8ddcc507311f-960.webp 960w, assets/optimized/806a8ddcc507311f-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                         <div class="image-overlay"><span class="image-overlay-text">POST</span></div>
                     </div>
-                    <div class="image-item"><img src="assets/optimized/94ddfef242be8026-1000.webp"
-                            alt="Wedding second post 1" loading="lazy" decoding="async" srcset="assets/optimized/94ddfef242be8026-480.webp 480w, assets/optimized/94ddfef242be8026-960.webp 960w, assets/optimized/94ddfef242be8026-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                    <div class="image-item"><img data-src="assets/optimized/94ddfef242be8026-1000.webp"
+                            alt="Wedding second post 1" loading="lazy" decoding="async" data-srcset="assets/optimized/94ddfef242be8026-480.webp 480w, assets/optimized/94ddfef242be8026-960.webp 960w, assets/optimized/94ddfef242be8026-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img src="assets/optimized/94ddfef242be8026-1000.webp"
+                            alt="Wedding second post 1" loading="lazy" decoding="async" srcset="assets/optimized/94ddfef242be8026-480.webp 480w, assets/optimized/94ddfef242be8026-960.webp 960w, assets/optimized/94ddfef242be8026-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                         <div class="image-overlay"><span class="image-overlay-text">POST</span></div>
                     </div>
-                    <div class="image-item"><img src="assets/optimized/b978b4445bd7e071-1000.webp"
-                            alt="Wedding second post 2" loading="lazy" decoding="async" srcset="assets/optimized/b978b4445bd7e071-480.webp 480w, assets/optimized/b978b4445bd7e071-960.webp 960w, assets/optimized/b978b4445bd7e071-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                    <div class="image-item"><img data-src="assets/optimized/b978b4445bd7e071-1000.webp"
+                            alt="Wedding second post 2" loading="lazy" decoding="async" data-srcset="assets/optimized/b978b4445bd7e071-480.webp 480w, assets/optimized/b978b4445bd7e071-960.webp 960w, assets/optimized/b978b4445bd7e071-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img src="assets/optimized/b978b4445bd7e071-1000.webp"
+                            alt="Wedding second post 2" loading="lazy" decoding="async" srcset="assets/optimized/b978b4445bd7e071-480.webp 480w, assets/optimized/b978b4445bd7e071-960.webp 960w, assets/optimized/b978b4445bd7e071-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                         <div class="image-overlay"><span class="image-overlay-text">POST</span></div>
                     </div>
-                    <div class="image-item"><img src="assets/optimized/8981fd53454e5275-1000.webp"
-                            alt="Wedding second post 3" loading="lazy" decoding="async" srcset="assets/optimized/8981fd53454e5275-480.webp 480w, assets/optimized/8981fd53454e5275-960.webp 960w, assets/optimized/8981fd53454e5275-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                    <div class="image-item"><img data-src="assets/optimized/8981fd53454e5275-1000.webp"
+                            alt="Wedding second post 3" loading="lazy" decoding="async" data-srcset="assets/optimized/8981fd53454e5275-480.webp 480w, assets/optimized/8981fd53454e5275-960.webp 960w, assets/optimized/8981fd53454e5275-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img src="assets/optimized/8981fd53454e5275-1000.webp"
+                            alt="Wedding second post 3" loading="lazy" decoding="async" srcset="assets/optimized/8981fd53454e5275-480.webp 480w, assets/optimized/8981fd53454e5275-960.webp 960w, assets/optimized/8981fd53454e5275-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                         <div class="image-overlay"><span class="image-overlay-text">POST</span></div>
                     </div>
-                    <div class="image-item"><img src="assets/optimized/d14551af74adcdbb-1000.webp"
-                            alt="Wedding second post 4" loading="lazy" decoding="async" srcset="assets/optimized/d14551af74adcdbb-480.webp 480w, assets/optimized/d14551af74adcdbb-960.webp 960w, assets/optimized/d14551af74adcdbb-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                    <div class="image-item"><img data-src="assets/optimized/d14551af74adcdbb-1000.webp"
+                            alt="Wedding second post 4" loading="lazy" decoding="async" data-srcset="assets/optimized/d14551af74adcdbb-480.webp 480w, assets/optimized/d14551af74adcdbb-960.webp 960w, assets/optimized/d14551af74adcdbb-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img src="assets/optimized/d14551af74adcdbb-1000.webp"
+                            alt="Wedding second post 4" loading="lazy" decoding="async" srcset="assets/optimized/d14551af74adcdbb-480.webp 480w, assets/optimized/d14551af74adcdbb-960.webp 960w, assets/optimized/d14551af74adcdbb-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                         <div class="image-overlay"><span class="image-overlay-text">POST</span></div>
                     </div>
-                    <div class="image-item"><img src="assets/optimized/24bd2015a9705a3e-1000.webp"
-                            alt="Wedding second post 5" loading="lazy" decoding="async" srcset="assets/optimized/24bd2015a9705a3e-480.webp 480w, assets/optimized/24bd2015a9705a3e-960.webp 960w, assets/optimized/24bd2015a9705a3e-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                    <div class="image-item"><img data-src="assets/optimized/24bd2015a9705a3e-1000.webp"
+                            alt="Wedding second post 5" loading="lazy" decoding="async" data-srcset="assets/optimized/24bd2015a9705a3e-480.webp 480w, assets/optimized/24bd2015a9705a3e-960.webp 960w, assets/optimized/24bd2015a9705a3e-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img src="assets/optimized/24bd2015a9705a3e-1000.webp"
+                            alt="Wedding second post 5" loading="lazy" decoding="async" srcset="assets/optimized/24bd2015a9705a3e-480.webp 480w, assets/optimized/24bd2015a9705a3e-960.webp 960w, assets/optimized/24bd2015a9705a3e-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                         <div class="image-overlay"><span class="image-overlay-text">POST</span></div>
                     </div>
-                    <div class="image-item"><img src="assets/optimized/3e21856f34a89708-1000.webp"
-                            alt="Wedding second post 6" loading="lazy" decoding="async" srcset="assets/optimized/3e21856f34a89708-480.webp 480w, assets/optimized/3e21856f34a89708-960.webp 960w, assets/optimized/3e21856f34a89708-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                    <div class="image-item"><img data-src="assets/optimized/3e21856f34a89708-1000.webp"
+                            alt="Wedding second post 6" loading="lazy" decoding="async" data-srcset="assets/optimized/3e21856f34a89708-480.webp 480w, assets/optimized/3e21856f34a89708-960.webp 960w, assets/optimized/3e21856f34a89708-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img src="assets/optimized/3e21856f34a89708-1000.webp"
+                            alt="Wedding second post 6" loading="lazy" decoding="async" srcset="assets/optimized/3e21856f34a89708-480.webp 480w, assets/optimized/3e21856f34a89708-960.webp 960w, assets/optimized/3e21856f34a89708-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                         <div class="image-overlay"><span class="image-overlay-text">POST</span></div>
                     </div>
-                    <div class="image-item"><img src="assets/optimized/ef191bc3a9483730-1000.webp" alt="Wedding third post 1"
-                            loading="lazy" decoding="async" srcset="assets/optimized/ef191bc3a9483730-480.webp 480w, assets/optimized/ef191bc3a9483730-960.webp 960w, assets/optimized/ef191bc3a9483730-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                    <div class="image-item"><img data-src="assets/optimized/ef191bc3a9483730-1000.webp" alt="Wedding third post 1"
+                            loading="lazy" decoding="async" data-srcset="assets/optimized/ef191bc3a9483730-480.webp 480w, assets/optimized/ef191bc3a9483730-960.webp 960w, assets/optimized/ef191bc3a9483730-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img src="assets/optimized/ef191bc3a9483730-1000.webp" alt="Wedding third post 1"
+                            loading="lazy" decoding="async" srcset="assets/optimized/ef191bc3a9483730-480.webp 480w, assets/optimized/ef191bc3a9483730-960.webp 960w, assets/optimized/ef191bc3a9483730-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                         <div class="image-overlay"><span class="image-overlay-text">POST</span></div>
                     </div>
-                    <div class="image-item"><img src="assets/optimized/686f7bd804d6a551-1000.webp" alt="Wedding third post 2"
-                            loading="lazy" decoding="async" srcset="assets/optimized/686f7bd804d6a551-480.webp 480w, assets/optimized/686f7bd804d6a551-960.webp 960w, assets/optimized/686f7bd804d6a551-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                    <div class="image-item"><img data-src="assets/optimized/686f7bd804d6a551-1000.webp" alt="Wedding third post 2"
+                            loading="lazy" decoding="async" data-srcset="assets/optimized/686f7bd804d6a551-480.webp 480w, assets/optimized/686f7bd804d6a551-960.webp 960w, assets/optimized/686f7bd804d6a551-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img src="assets/optimized/686f7bd804d6a551-1000.webp" alt="Wedding third post 2"
+                            loading="lazy" decoding="async" srcset="assets/optimized/686f7bd804d6a551-480.webp 480w, assets/optimized/686f7bd804d6a551-960.webp 960w, assets/optimized/686f7bd804d6a551-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                         <div class="image-overlay"><span class="image-overlay-text">POST</span></div>
                     </div>
-                    <div class="image-item"><img src="assets/optimized/40ad554ed04d7508-1000.webp" alt="Wedding third post 3"
-                            loading="lazy" decoding="async" srcset="assets/optimized/40ad554ed04d7508-480.webp 480w, assets/optimized/40ad554ed04d7508-960.webp 960w, assets/optimized/40ad554ed04d7508-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                    <div class="image-item"><img data-src="assets/optimized/40ad554ed04d7508-1000.webp" alt="Wedding third post 3"
+                            loading="lazy" decoding="async" data-srcset="assets/optimized/40ad554ed04d7508-480.webp 480w, assets/optimized/40ad554ed04d7508-960.webp 960w, assets/optimized/40ad554ed04d7508-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img src="assets/optimized/40ad554ed04d7508-1000.webp" alt="Wedding third post 3"
+                            loading="lazy" decoding="async" srcset="assets/optimized/40ad554ed04d7508-480.webp 480w, assets/optimized/40ad554ed04d7508-960.webp 960w, assets/optimized/40ad554ed04d7508-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                         <div class="image-overlay"><span class="image-overlay-text">POST</span></div>
                     </div>
                 </div>
@@ -189,8 +204,9 @@
         <div class="footer-container">
             <div class="footer-logo-container">
                 <a href="index.html" aria-label="HEIF Artist Home">
-                    <img src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo" loading="lazy"
-                        decoding="async" srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596">
+                    <img data-src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo lazy-image" loading="lazy"
+                        decoding="async" data-srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272550%27%20height%3D%27596%27%2F%3E"><noscript><img src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo" loading="lazy"
+                        decoding="async" srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596"></noscript>
                 </a>
             </div>
             <div class="footer-home">
@@ -208,7 +224,7 @@
                     target="_blank" rel="noopener noreferrer">Jayesh Mepani</a></p>
         </div>
     </footer>
-    
+
 </body>
 
 </html>

@@ -21,26 +21,23 @@
     <meta property="og:site_name" content="HEIF Artist">
 
     <!-- Preconnect for Performance (Google Fonts) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/img/logow.png">
     <link rel="apple-touch-icon" href="assets/img/logow.png">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/css.css">
-    <link rel="stylesheet" href="assets/css/masonry.css">
-    <link rel="stylesheet" href="assets/css/cursor.css">
-    <script src="assets/vendor/three.min.js" defer></script>
-    <script src="assets/vendor/gsap.min.js" defer></script>
-    <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
-    <script src="assets/vendor/lenis.min.js" defer></script>
-    <script src="assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="assets/css/css.css?v=20261026-speed2">
+    <link rel="stylesheet" href="assets/css/masonry.css?v=20261026-speed2">
+    <link rel="stylesheet" href="assets/css/cursor.css?v=20261026-speed2">
 
-    <script src="assets/js/scroll-animations.js" defer></script>
-    <script src="assets/js/particles-effect.js" defer></script>
-<link rel="stylesheet" href="assets/css/performance.css">
+    <script src="assets/js/script.js?v=20261026-speed2" defer></script>
+
+    <script src="assets/js/scroll-animations.js?v=20261026-speed2" defer></script>
+
+<link rel="stylesheet" href="assets/css/performance.css?v=20261026-speed2">
+<script src="assets/js/image-delivery.js?v=20261026-speed2" defer></script>
+<noscript><style>.lazy-image{display:none!important}</style></noscript>
 </head>
 
 <body>
@@ -49,9 +46,6 @@
     <div class="scroll-tracker"></div>
 
     <!-- Preloader -->
-    
-
-    <canvas id="webgl-canvas"></canvas>
 
     <div class="stars-layer">
         <div class="stars-extra"></div>
@@ -96,11 +90,13 @@
                     <!-- Pair 1 -->
                     <div class="image-item">
                         <div class="compare" id="compare-1">
-                            <img class="compare__image-one" src="assets/optimized/2bf4fa37fee6e037-690.webp" alt="After Edit"
-                                loading="lazy" decoding="async" srcset="assets/optimized/2bf4fa37fee6e037-480.webp 480w, assets/optimized/2bf4fa37fee6e037-690.webp 690w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="690" height="1027">
+                            <img class="compare__image-one lazy-image" data-src="assets/optimized/2bf4fa37fee6e037-690.webp" alt="After Edit"
+                                loading="lazy" decoding="async" data-srcset="assets/optimized/2bf4fa37fee6e037-480.webp 480w, assets/optimized/2bf4fa37fee6e037-690.webp 690w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="690" height="1027" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27690%27%20height%3D%271027%27%2F%3E"><noscript><img class="compare__image-one" src="assets/optimized/2bf4fa37fee6e037-690.webp" alt="After Edit"
+                                loading="lazy" decoding="async" srcset="assets/optimized/2bf4fa37fee6e037-480.webp 480w, assets/optimized/2bf4fa37fee6e037-690.webp 690w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="690" height="1027"></noscript>
                             <div class="compare__mask">
-                                <img class="compare__image-two" src="assets/optimized/c6deaf7aa0e6a8d2-690.webp" alt="Before Edit"
-                                    loading="lazy" decoding="async" srcset="assets/optimized/c6deaf7aa0e6a8d2-480.webp 480w, assets/optimized/c6deaf7aa0e6a8d2-690.webp 690w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="690" height="1027">
+                                <img class="compare__image-two lazy-image" data-src="assets/optimized/c6deaf7aa0e6a8d2-690.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" data-srcset="assets/optimized/c6deaf7aa0e6a8d2-480.webp 480w, assets/optimized/c6deaf7aa0e6a8d2-690.webp 690w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="690" height="1027" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27690%27%20height%3D%271027%27%2F%3E"><noscript><img class="compare__image-two" src="assets/optimized/c6deaf7aa0e6a8d2-690.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" srcset="assets/optimized/c6deaf7aa0e6a8d2-480.webp 480w, assets/optimized/c6deaf7aa0e6a8d2-690.webp 690w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="690" height="1027"></noscript>
                             </div>
                             <div class="compare__separator">
                                 <div class="compare__icon"></div>
@@ -112,11 +108,13 @@
                     <!-- Pair 2 -->
                     <div class="image-item">
                         <div class="compare" id="compare-2">
-                            <img class="compare__image-one" src="assets/optimized/988ee056de98abc3-900.webp" alt="After Edit"
-                                loading="lazy" decoding="async" srcset="assets/optimized/988ee056de98abc3-480.webp 480w, assets/optimized/988ee056de98abc3-900.webp 900w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="900" height="1350">
+                            <img class="compare__image-one lazy-image" data-src="assets/optimized/988ee056de98abc3-900.webp" alt="After Edit"
+                                loading="lazy" decoding="async" data-srcset="assets/optimized/988ee056de98abc3-480.webp 480w, assets/optimized/988ee056de98abc3-900.webp 900w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="900" height="1350" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27900%27%20height%3D%271350%27%2F%3E"><noscript><img class="compare__image-one" src="assets/optimized/988ee056de98abc3-900.webp" alt="After Edit"
+                                loading="lazy" decoding="async" srcset="assets/optimized/988ee056de98abc3-480.webp 480w, assets/optimized/988ee056de98abc3-900.webp 900w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="900" height="1350"></noscript>
                             <div class="compare__mask">
-                                <img class="compare__image-two" src="assets/optimized/bb92833826d02c51-900.webp" alt="Before Edit"
-                                    loading="lazy" decoding="async" srcset="assets/optimized/bb92833826d02c51-480.webp 480w, assets/optimized/bb92833826d02c51-900.webp 900w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="900" height="1350">
+                                <img class="compare__image-two lazy-image" data-src="assets/optimized/bb92833826d02c51-900.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" data-srcset="assets/optimized/bb92833826d02c51-480.webp 480w, assets/optimized/bb92833826d02c51-900.webp 900w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="900" height="1350" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27900%27%20height%3D%271350%27%2F%3E"><noscript><img class="compare__image-two" src="assets/optimized/bb92833826d02c51-900.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" srcset="assets/optimized/bb92833826d02c51-480.webp 480w, assets/optimized/bb92833826d02c51-900.webp 900w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="900" height="1350"></noscript>
                             </div>
                             <div class="compare__separator">
                                 <div class="compare__icon"></div>
@@ -128,11 +126,13 @@
                     <!-- Pair 3 -->
                     <div class="image-item">
                         <div class="compare" id="compare-3">
-                            <img class="compare__image-one" src="assets/optimized/c6613afbbf58010d-1000.webp" alt="After Edit"
-                                loading="lazy" decoding="async" srcset="assets/optimized/c6613afbbf58010d-480.webp 480w, assets/optimized/c6613afbbf58010d-960.webp 960w, assets/optimized/c6613afbbf58010d-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                            <img class="compare__image-one lazy-image" data-src="assets/optimized/c6613afbbf58010d-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" data-srcset="assets/optimized/c6613afbbf58010d-480.webp 480w, assets/optimized/c6613afbbf58010d-960.webp 960w, assets/optimized/c6613afbbf58010d-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-one" src="assets/optimized/c6613afbbf58010d-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" srcset="assets/optimized/c6613afbbf58010d-480.webp 480w, assets/optimized/c6613afbbf58010d-960.webp 960w, assets/optimized/c6613afbbf58010d-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             <div class="compare__mask">
-                                <img class="compare__image-two" src="assets/optimized/a5f1f1da3e70d77f-1000.webp" alt="Before Edit"
-                                    loading="lazy" decoding="async" srcset="assets/optimized/a5f1f1da3e70d77f-480.webp 480w, assets/optimized/a5f1f1da3e70d77f-960.webp 960w, assets/optimized/a5f1f1da3e70d77f-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                                <img class="compare__image-two lazy-image" data-src="assets/optimized/a5f1f1da3e70d77f-1000.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" data-srcset="assets/optimized/a5f1f1da3e70d77f-480.webp 480w, assets/optimized/a5f1f1da3e70d77f-960.webp 960w, assets/optimized/a5f1f1da3e70d77f-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-two" src="assets/optimized/a5f1f1da3e70d77f-1000.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" srcset="assets/optimized/a5f1f1da3e70d77f-480.webp 480w, assets/optimized/a5f1f1da3e70d77f-960.webp 960w, assets/optimized/a5f1f1da3e70d77f-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             </div>
                             <div class="compare__separator">
                                 <div class="compare__icon"></div>
@@ -144,11 +144,13 @@
                     <!-- Pair 4 -->
                     <div class="image-item">
                         <div class="compare" id="compare-4">
-                            <img class="compare__image-one" src="assets/optimized/5332ebeabdb0f60f-1000.webp" alt="After Edit"
-                                loading="lazy" decoding="async" srcset="assets/optimized/5332ebeabdb0f60f-480.webp 480w, assets/optimized/5332ebeabdb0f60f-960.webp 960w, assets/optimized/5332ebeabdb0f60f-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                            <img class="compare__image-one lazy-image" data-src="assets/optimized/5332ebeabdb0f60f-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" data-srcset="assets/optimized/5332ebeabdb0f60f-480.webp 480w, assets/optimized/5332ebeabdb0f60f-960.webp 960w, assets/optimized/5332ebeabdb0f60f-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-one" src="assets/optimized/5332ebeabdb0f60f-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" srcset="assets/optimized/5332ebeabdb0f60f-480.webp 480w, assets/optimized/5332ebeabdb0f60f-960.webp 960w, assets/optimized/5332ebeabdb0f60f-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             <div class="compare__mask">
-                                <img class="compare__image-two" src="assets/optimized/5fe2139bf72745f8-1000.webp" alt="Before Edit"
-                                    loading="lazy" decoding="async" srcset="assets/optimized/5fe2139bf72745f8-480.webp 480w, assets/optimized/5fe2139bf72745f8-960.webp 960w, assets/optimized/5fe2139bf72745f8-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                                <img class="compare__image-two lazy-image" data-src="assets/optimized/5fe2139bf72745f8-1000.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" data-srcset="assets/optimized/5fe2139bf72745f8-480.webp 480w, assets/optimized/5fe2139bf72745f8-960.webp 960w, assets/optimized/5fe2139bf72745f8-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-two" src="assets/optimized/5fe2139bf72745f8-1000.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" srcset="assets/optimized/5fe2139bf72745f8-480.webp 480w, assets/optimized/5fe2139bf72745f8-960.webp 960w, assets/optimized/5fe2139bf72745f8-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             </div>
                             <div class="compare__separator">
                                 <div class="compare__icon"></div>
@@ -160,11 +162,13 @@
                     <!-- Pair 5 -->
                     <div class="image-item">
                         <div class="compare" id="compare-5">
-                            <img class="compare__image-one" src="assets/optimized/7f6e661c870ac967-1500.webp" alt="After Edit"
-                                loading="lazy" decoding="async" srcset="assets/optimized/7f6e661c870ac967-480.webp 480w, assets/optimized/7f6e661c870ac967-960.webp 960w, assets/optimized/7f6e661c870ac967-1500.webp 1500w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1500" height="994">
+                            <img class="compare__image-one lazy-image" data-src="assets/optimized/7f6e661c870ac967-1500.webp" alt="After Edit"
+                                loading="lazy" decoding="async" data-srcset="assets/optimized/7f6e661c870ac967-480.webp 480w, assets/optimized/7f6e661c870ac967-960.webp 960w, assets/optimized/7f6e661c870ac967-1500.webp 1500w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1500" height="994" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271500%27%20height%3D%27994%27%2F%3E"><noscript><img class="compare__image-one" src="assets/optimized/7f6e661c870ac967-1500.webp" alt="After Edit"
+                                loading="lazy" decoding="async" srcset="assets/optimized/7f6e661c870ac967-480.webp 480w, assets/optimized/7f6e661c870ac967-960.webp 960w, assets/optimized/7f6e661c870ac967-1500.webp 1500w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1500" height="994"></noscript>
                             <div class="compare__mask">
-                                <img class="compare__image-two" src="assets/optimized/7522ab68c6e6e3d3-1500.webp" alt="Before Edit"
-                                    loading="lazy" decoding="async" srcset="assets/optimized/7522ab68c6e6e3d3-480.webp 480w, assets/optimized/7522ab68c6e6e3d3-960.webp 960w, assets/optimized/7522ab68c6e6e3d3-1500.webp 1500w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1500" height="994">
+                                <img class="compare__image-two lazy-image" data-src="assets/optimized/7522ab68c6e6e3d3-1500.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" data-srcset="assets/optimized/7522ab68c6e6e3d3-480.webp 480w, assets/optimized/7522ab68c6e6e3d3-960.webp 960w, assets/optimized/7522ab68c6e6e3d3-1500.webp 1500w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1500" height="994" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271500%27%20height%3D%27994%27%2F%3E"><noscript><img class="compare__image-two" src="assets/optimized/7522ab68c6e6e3d3-1500.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" srcset="assets/optimized/7522ab68c6e6e3d3-480.webp 480w, assets/optimized/7522ab68c6e6e3d3-960.webp 960w, assets/optimized/7522ab68c6e6e3d3-1500.webp 1500w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1500" height="994"></noscript>
                             </div>
                             <div class="compare__separator">
                                 <div class="compare__icon"></div>
@@ -176,11 +180,13 @@
                     <!-- Pair 6 -->
                     <div class="image-item">
                         <div class="compare" id="compare-6">
-                            <img class="compare__image-one" src="assets/optimized/8e5fb36ab217bc51-1000.webp" alt="After Edit"
-                                loading="lazy" decoding="async" srcset="assets/optimized/8e5fb36ab217bc51-480.webp 480w, assets/optimized/8e5fb36ab217bc51-960.webp 960w, assets/optimized/8e5fb36ab217bc51-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                            <img class="compare__image-one lazy-image" data-src="assets/optimized/8e5fb36ab217bc51-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" data-srcset="assets/optimized/8e5fb36ab217bc51-480.webp 480w, assets/optimized/8e5fb36ab217bc51-960.webp 960w, assets/optimized/8e5fb36ab217bc51-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-one" src="assets/optimized/8e5fb36ab217bc51-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" srcset="assets/optimized/8e5fb36ab217bc51-480.webp 480w, assets/optimized/8e5fb36ab217bc51-960.webp 960w, assets/optimized/8e5fb36ab217bc51-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             <div class="compare__mask">
-                                <img class="compare__image-two" src="assets/optimized/7650936a3222a153-1000.webp" alt="Before Edit"
-                                    loading="lazy" decoding="async" srcset="assets/optimized/7650936a3222a153-480.webp 480w, assets/optimized/7650936a3222a153-960.webp 960w, assets/optimized/7650936a3222a153-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                                <img class="compare__image-two lazy-image" data-src="assets/optimized/7650936a3222a153-1000.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" data-srcset="assets/optimized/7650936a3222a153-480.webp 480w, assets/optimized/7650936a3222a153-960.webp 960w, assets/optimized/7650936a3222a153-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-two" src="assets/optimized/7650936a3222a153-1000.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" srcset="assets/optimized/7650936a3222a153-480.webp 480w, assets/optimized/7650936a3222a153-960.webp 960w, assets/optimized/7650936a3222a153-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             </div>
                             <div class="compare__separator">
                                 <div class="compare__icon"></div>
@@ -192,11 +198,13 @@
                     <!-- Pair 7 -->
                     <div class="image-item">
                         <div class="compare" id="compare-7">
-                            <img class="compare__image-one" src="assets/optimized/49a8a906cbf74d36-1000.webp" alt="After Edit"
-                                loading="lazy" decoding="async" srcset="assets/optimized/49a8a906cbf74d36-480.webp 480w, assets/optimized/49a8a906cbf74d36-960.webp 960w, assets/optimized/49a8a906cbf74d36-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                            <img class="compare__image-one lazy-image" data-src="assets/optimized/49a8a906cbf74d36-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" data-srcset="assets/optimized/49a8a906cbf74d36-480.webp 480w, assets/optimized/49a8a906cbf74d36-960.webp 960w, assets/optimized/49a8a906cbf74d36-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-one" src="assets/optimized/49a8a906cbf74d36-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" srcset="assets/optimized/49a8a906cbf74d36-480.webp 480w, assets/optimized/49a8a906cbf74d36-960.webp 960w, assets/optimized/49a8a906cbf74d36-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             <div class="compare__mask">
-                                <img class="compare__image-two" src="assets/optimized/47704b59c4d5a441-1000.webp" alt="Before Edit"
-                                    loading="lazy" decoding="async" srcset="assets/optimized/47704b59c4d5a441-480.webp 480w, assets/optimized/47704b59c4d5a441-960.webp 960w, assets/optimized/47704b59c4d5a441-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                                <img class="compare__image-two lazy-image" data-src="assets/optimized/47704b59c4d5a441-1000.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" data-srcset="assets/optimized/47704b59c4d5a441-480.webp 480w, assets/optimized/47704b59c4d5a441-960.webp 960w, assets/optimized/47704b59c4d5a441-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-two" src="assets/optimized/47704b59c4d5a441-1000.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" srcset="assets/optimized/47704b59c4d5a441-480.webp 480w, assets/optimized/47704b59c4d5a441-960.webp 960w, assets/optimized/47704b59c4d5a441-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             </div>
                             <div class="compare__separator">
                                 <div class="compare__icon"></div>
@@ -208,11 +216,13 @@
                     <!-- Pair 8 -->
                     <div class="image-item">
                         <div class="compare" id="compare-8">
-                            <img class="compare__image-one" src="assets/optimized/c0f05f3653d39420-1000.webp" alt="After Edit"
-                                loading="lazy" decoding="async" srcset="assets/optimized/c0f05f3653d39420-480.webp 480w, assets/optimized/c0f05f3653d39420-960.webp 960w, assets/optimized/c0f05f3653d39420-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                            <img class="compare__image-one lazy-image" data-src="assets/optimized/c0f05f3653d39420-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" data-srcset="assets/optimized/c0f05f3653d39420-480.webp 480w, assets/optimized/c0f05f3653d39420-960.webp 960w, assets/optimized/c0f05f3653d39420-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-one" src="assets/optimized/c0f05f3653d39420-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" srcset="assets/optimized/c0f05f3653d39420-480.webp 480w, assets/optimized/c0f05f3653d39420-960.webp 960w, assets/optimized/c0f05f3653d39420-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             <div class="compare__mask">
-                                <img class="compare__image-two" src="assets/optimized/17a88b7aa6e95101-1000.webp" alt="Before Edit"
-                                    loading="lazy" decoding="async" srcset="assets/optimized/17a88b7aa6e95101-480.webp 480w, assets/optimized/17a88b7aa6e95101-960.webp 960w, assets/optimized/17a88b7aa6e95101-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                                <img class="compare__image-two lazy-image" data-src="assets/optimized/17a88b7aa6e95101-1000.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" data-srcset="assets/optimized/17a88b7aa6e95101-480.webp 480w, assets/optimized/17a88b7aa6e95101-960.webp 960w, assets/optimized/17a88b7aa6e95101-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-two" src="assets/optimized/17a88b7aa6e95101-1000.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" srcset="assets/optimized/17a88b7aa6e95101-480.webp 480w, assets/optimized/17a88b7aa6e95101-960.webp 960w, assets/optimized/17a88b7aa6e95101-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             </div>
                             <div class="compare__separator">
                                 <div class="compare__icon"></div>
@@ -224,11 +234,13 @@
                     <!-- Pair 9 -->
                     <div class="image-item">
                         <div class="compare" id="compare-9">
-                            <img class="compare__image-one" src="assets/optimized/2f0336060f0aeb17-1000.webp" alt="After Edit"
-                                loading="lazy" decoding="async" srcset="assets/optimized/2f0336060f0aeb17-480.webp 480w, assets/optimized/2f0336060f0aeb17-960.webp 960w, assets/optimized/2f0336060f0aeb17-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                            <img class="compare__image-one lazy-image" data-src="assets/optimized/2f0336060f0aeb17-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" data-srcset="assets/optimized/2f0336060f0aeb17-480.webp 480w, assets/optimized/2f0336060f0aeb17-960.webp 960w, assets/optimized/2f0336060f0aeb17-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-one" src="assets/optimized/2f0336060f0aeb17-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" srcset="assets/optimized/2f0336060f0aeb17-480.webp 480w, assets/optimized/2f0336060f0aeb17-960.webp 960w, assets/optimized/2f0336060f0aeb17-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             <div class="compare__mask">
-                                <img class="compare__image-two" src="assets/optimized/11217f55f979906b-1000.webp" alt="Before Edit"
-                                    loading="lazy" decoding="async" srcset="assets/optimized/11217f55f979906b-480.webp 480w, assets/optimized/11217f55f979906b-960.webp 960w, assets/optimized/11217f55f979906b-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                                <img class="compare__image-two lazy-image" data-src="assets/optimized/11217f55f979906b-1000.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" data-srcset="assets/optimized/11217f55f979906b-480.webp 480w, assets/optimized/11217f55f979906b-960.webp 960w, assets/optimized/11217f55f979906b-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-two" src="assets/optimized/11217f55f979906b-1000.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" srcset="assets/optimized/11217f55f979906b-480.webp 480w, assets/optimized/11217f55f979906b-960.webp 960w, assets/optimized/11217f55f979906b-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             </div>
                             <div class="compare__separator">
                                 <div class="compare__icon"></div>
@@ -240,11 +252,13 @@
                     <!-- Pair 10 -->
                     <div class="image-item">
                         <div class="compare" id="compare-10">
-                            <img class="compare__image-one" src="assets/optimized/291e59d57262f2a1-1000.webp" alt="After Edit"
-                                loading="lazy" decoding="async" srcset="assets/optimized/291e59d57262f2a1-480.webp 480w, assets/optimized/291e59d57262f2a1-960.webp 960w, assets/optimized/291e59d57262f2a1-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                            <img class="compare__image-one lazy-image" data-src="assets/optimized/291e59d57262f2a1-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" data-srcset="assets/optimized/291e59d57262f2a1-480.webp 480w, assets/optimized/291e59d57262f2a1-960.webp 960w, assets/optimized/291e59d57262f2a1-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-one" src="assets/optimized/291e59d57262f2a1-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" srcset="assets/optimized/291e59d57262f2a1-480.webp 480w, assets/optimized/291e59d57262f2a1-960.webp 960w, assets/optimized/291e59d57262f2a1-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             <div class="compare__mask">
-                                <img class="compare__image-two" src="assets/optimized/78031d7c1a987a4c-1000.webp" alt="Before Edit"
-                                    loading="lazy" decoding="async" srcset="assets/optimized/78031d7c1a987a4c-480.webp 480w, assets/optimized/78031d7c1a987a4c-960.webp 960w, assets/optimized/78031d7c1a987a4c-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                                <img class="compare__image-two lazy-image" data-src="assets/optimized/78031d7c1a987a4c-1000.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" data-srcset="assets/optimized/78031d7c1a987a4c-480.webp 480w, assets/optimized/78031d7c1a987a4c-960.webp 960w, assets/optimized/78031d7c1a987a4c-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-two" src="assets/optimized/78031d7c1a987a4c-1000.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" srcset="assets/optimized/78031d7c1a987a4c-480.webp 480w, assets/optimized/78031d7c1a987a4c-960.webp 960w, assets/optimized/78031d7c1a987a4c-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             </div>
                             <div class="compare__separator">
                                 <div class="compare__icon"></div>
@@ -256,11 +270,13 @@
                     <!-- Pair 11 -->
                     <div class="image-item">
                         <div class="compare" id="compare-11">
-                            <img class="compare__image-one" src="assets/optimized/dfe0f79cfb23353c-1600.webp" alt="After Edit"
-                                loading="lazy" decoding="async" srcset="assets/optimized/dfe0f79cfb23353c-480.webp 480w, assets/optimized/dfe0f79cfb23353c-960.webp 960w, assets/optimized/dfe0f79cfb23353c-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="2044" height="2555">
+                            <img class="compare__image-one lazy-image" data-src="assets/optimized/dfe0f79cfb23353c-1600.webp" alt="After Edit"
+                                loading="lazy" decoding="async" data-srcset="assets/optimized/dfe0f79cfb23353c-480.webp 480w, assets/optimized/dfe0f79cfb23353c-960.webp 960w, assets/optimized/dfe0f79cfb23353c-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="2044" height="2555" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272044%27%20height%3D%272555%27%2F%3E"><noscript><img class="compare__image-one" src="assets/optimized/dfe0f79cfb23353c-1600.webp" alt="After Edit"
+                                loading="lazy" decoding="async" srcset="assets/optimized/dfe0f79cfb23353c-480.webp 480w, assets/optimized/dfe0f79cfb23353c-960.webp 960w, assets/optimized/dfe0f79cfb23353c-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="2044" height="2555"></noscript>
                             <div class="compare__mask">
-                                <img class="compare__image-two" src="assets/optimized/6f1cb6ec4ca5cfbd-1600.webp" alt="Before Edit"
-                                    loading="lazy" decoding="async" srcset="assets/optimized/6f1cb6ec4ca5cfbd-480.webp 480w, assets/optimized/6f1cb6ec4ca5cfbd-960.webp 960w, assets/optimized/6f1cb6ec4ca5cfbd-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="2044" height="2555">
+                                <img class="compare__image-two lazy-image" data-src="assets/optimized/6f1cb6ec4ca5cfbd-1600.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" data-srcset="assets/optimized/6f1cb6ec4ca5cfbd-480.webp 480w, assets/optimized/6f1cb6ec4ca5cfbd-960.webp 960w, assets/optimized/6f1cb6ec4ca5cfbd-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="2044" height="2555" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272044%27%20height%3D%272555%27%2F%3E"><noscript><img class="compare__image-two" src="assets/optimized/6f1cb6ec4ca5cfbd-1600.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" srcset="assets/optimized/6f1cb6ec4ca5cfbd-480.webp 480w, assets/optimized/6f1cb6ec4ca5cfbd-960.webp 960w, assets/optimized/6f1cb6ec4ca5cfbd-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="2044" height="2555"></noscript>
                             </div>
                             <div class="compare__separator">
                                 <div class="compare__icon"></div>
@@ -272,11 +288,13 @@
                     <!-- Pair 12 -->
                     <div class="image-item">
                         <div class="compare" id="compare-12">
-                            <img class="compare__image-one" src="assets/optimized/c26fdc26a57cd287-900.webp" alt="After Edit"
-                                loading="lazy" decoding="async" srcset="assets/optimized/c26fdc26a57cd287-480.webp 480w, assets/optimized/c26fdc26a57cd287-900.webp 900w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="900" height="1350">
+                            <img class="compare__image-one lazy-image" data-src="assets/optimized/c26fdc26a57cd287-900.webp" alt="After Edit"
+                                loading="lazy" decoding="async" data-srcset="assets/optimized/c26fdc26a57cd287-480.webp 480w, assets/optimized/c26fdc26a57cd287-900.webp 900w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="900" height="1350" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27900%27%20height%3D%271350%27%2F%3E"><noscript><img class="compare__image-one" src="assets/optimized/c26fdc26a57cd287-900.webp" alt="After Edit"
+                                loading="lazy" decoding="async" srcset="assets/optimized/c26fdc26a57cd287-480.webp 480w, assets/optimized/c26fdc26a57cd287-900.webp 900w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="900" height="1350"></noscript>
                             <div class="compare__mask">
-                                <img class="compare__image-two" src="assets/optimized/ef424d7f8b2bc769-900.webp" alt="Before Edit"
-                                    loading="lazy" decoding="async" srcset="assets/optimized/ef424d7f8b2bc769-480.webp 480w, assets/optimized/ef424d7f8b2bc769-900.webp 900w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="900" height="1350">
+                                <img class="compare__image-two lazy-image" data-src="assets/optimized/ef424d7f8b2bc769-900.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" data-srcset="assets/optimized/ef424d7f8b2bc769-480.webp 480w, assets/optimized/ef424d7f8b2bc769-900.webp 900w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="900" height="1350" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27900%27%20height%3D%271350%27%2F%3E"><noscript><img class="compare__image-two" src="assets/optimized/ef424d7f8b2bc769-900.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" srcset="assets/optimized/ef424d7f8b2bc769-480.webp 480w, assets/optimized/ef424d7f8b2bc769-900.webp 900w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="900" height="1350"></noscript>
                             </div>
                             <div class="compare__separator">
                                 <div class="compare__icon"></div>
@@ -288,11 +306,13 @@
                     <!-- Pair 13 -->
                     <div class="image-item">
                         <div class="compare" id="compare-13">
-                            <img class="compare__image-one" src="assets/optimized/23f430436810cb8c-1000.webp" alt="After Edit"
-                                loading="lazy" decoding="async" srcset="assets/optimized/23f430436810cb8c-480.webp 480w, assets/optimized/23f430436810cb8c-960.webp 960w, assets/optimized/23f430436810cb8c-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                            <img class="compare__image-one lazy-image" data-src="assets/optimized/23f430436810cb8c-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" data-srcset="assets/optimized/23f430436810cb8c-480.webp 480w, assets/optimized/23f430436810cb8c-960.webp 960w, assets/optimized/23f430436810cb8c-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-one" src="assets/optimized/23f430436810cb8c-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" srcset="assets/optimized/23f430436810cb8c-480.webp 480w, assets/optimized/23f430436810cb8c-960.webp 960w, assets/optimized/23f430436810cb8c-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             <div class="compare__mask">
-                                <img class="compare__image-two" src="assets/optimized/a73c5b0b7e73ebff-1000.webp" alt="Before Edit"
-                                    loading="lazy" decoding="async" srcset="assets/optimized/a73c5b0b7e73ebff-480.webp 480w, assets/optimized/a73c5b0b7e73ebff-960.webp 960w, assets/optimized/a73c5b0b7e73ebff-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                                <img class="compare__image-two lazy-image" data-src="assets/optimized/a73c5b0b7e73ebff-1000.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" data-srcset="assets/optimized/a73c5b0b7e73ebff-480.webp 480w, assets/optimized/a73c5b0b7e73ebff-960.webp 960w, assets/optimized/a73c5b0b7e73ebff-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-two" src="assets/optimized/a73c5b0b7e73ebff-1000.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" srcset="assets/optimized/a73c5b0b7e73ebff-480.webp 480w, assets/optimized/a73c5b0b7e73ebff-960.webp 960w, assets/optimized/a73c5b0b7e73ebff-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             </div>
                             <div class="compare__separator">
                                 <div class="compare__icon"></div>
@@ -304,11 +324,13 @@
                     <!-- Pair 14 -->
                     <div class="image-item">
                         <div class="compare" id="compare-14">
-                            <img class="compare__image-one" src="assets/optimized/05c0ef0196df2556-1000.webp" alt="After Edit"
-                                loading="lazy" decoding="async" srcset="assets/optimized/05c0ef0196df2556-480.webp 480w, assets/optimized/05c0ef0196df2556-960.webp 960w, assets/optimized/05c0ef0196df2556-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                            <img class="compare__image-one lazy-image" data-src="assets/optimized/05c0ef0196df2556-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" data-srcset="assets/optimized/05c0ef0196df2556-480.webp 480w, assets/optimized/05c0ef0196df2556-960.webp 960w, assets/optimized/05c0ef0196df2556-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-one" src="assets/optimized/05c0ef0196df2556-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" srcset="assets/optimized/05c0ef0196df2556-480.webp 480w, assets/optimized/05c0ef0196df2556-960.webp 960w, assets/optimized/05c0ef0196df2556-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             <div class="compare__mask">
-                                <img class="compare__image-two" src="assets/optimized/8757e26ba1ffdc30-1000.webp" alt="Before Edit"
-                                    loading="lazy" decoding="async" srcset="assets/optimized/8757e26ba1ffdc30-480.webp 480w, assets/optimized/8757e26ba1ffdc30-960.webp 960w, assets/optimized/8757e26ba1ffdc30-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                                <img class="compare__image-two lazy-image" data-src="assets/optimized/8757e26ba1ffdc30-1000.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" data-srcset="assets/optimized/8757e26ba1ffdc30-480.webp 480w, assets/optimized/8757e26ba1ffdc30-960.webp 960w, assets/optimized/8757e26ba1ffdc30-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-two" src="assets/optimized/8757e26ba1ffdc30-1000.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" srcset="assets/optimized/8757e26ba1ffdc30-480.webp 480w, assets/optimized/8757e26ba1ffdc30-960.webp 960w, assets/optimized/8757e26ba1ffdc30-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             </div>
                             <div class="compare__separator">
                                 <div class="compare__icon"></div>
@@ -320,11 +342,13 @@
                     <!-- Pair 15 -->
                     <div class="image-item">
                         <div class="compare" id="compare-15">
-                            <img class="compare__image-one" src="assets/optimized/4d16c15e2e9a8ae7-1000.webp" alt="After Edit"
-                                loading="lazy" decoding="async" srcset="assets/optimized/4d16c15e2e9a8ae7-480.webp 480w, assets/optimized/4d16c15e2e9a8ae7-960.webp 960w, assets/optimized/4d16c15e2e9a8ae7-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                            <img class="compare__image-one lazy-image" data-src="assets/optimized/4d16c15e2e9a8ae7-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" data-srcset="assets/optimized/4d16c15e2e9a8ae7-480.webp 480w, assets/optimized/4d16c15e2e9a8ae7-960.webp 960w, assets/optimized/4d16c15e2e9a8ae7-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-one" src="assets/optimized/4d16c15e2e9a8ae7-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" srcset="assets/optimized/4d16c15e2e9a8ae7-480.webp 480w, assets/optimized/4d16c15e2e9a8ae7-960.webp 960w, assets/optimized/4d16c15e2e9a8ae7-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             <div class="compare__mask">
-                                <img class="compare__image-two" src="assets/optimized/f9f528e058b4d904-1000.webp" alt="Before Edit"
-                                    loading="lazy" decoding="async" srcset="assets/optimized/f9f528e058b4d904-480.webp 480w, assets/optimized/f9f528e058b4d904-960.webp 960w, assets/optimized/f9f528e058b4d904-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                                <img class="compare__image-two lazy-image" data-src="assets/optimized/f9f528e058b4d904-1000.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" data-srcset="assets/optimized/f9f528e058b4d904-480.webp 480w, assets/optimized/f9f528e058b4d904-960.webp 960w, assets/optimized/f9f528e058b4d904-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-two" src="assets/optimized/f9f528e058b4d904-1000.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" srcset="assets/optimized/f9f528e058b4d904-480.webp 480w, assets/optimized/f9f528e058b4d904-960.webp 960w, assets/optimized/f9f528e058b4d904-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             </div>
                             <div class="compare__separator">
                                 <div class="compare__icon"></div>
@@ -336,11 +360,13 @@
                     <!-- Pair 16 -->
                     <div class="image-item">
                         <div class="compare" id="compare-16">
-                            <img class="compare__image-one" src="assets/optimized/7d54830c6265be38-1000.webp" alt="After Edit"
-                                loading="lazy" decoding="async" srcset="assets/optimized/7d54830c6265be38-480.webp 480w, assets/optimized/7d54830c6265be38-960.webp 960w, assets/optimized/7d54830c6265be38-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                            <img class="compare__image-one lazy-image" data-src="assets/optimized/7d54830c6265be38-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" data-srcset="assets/optimized/7d54830c6265be38-480.webp 480w, assets/optimized/7d54830c6265be38-960.webp 960w, assets/optimized/7d54830c6265be38-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-one" src="assets/optimized/7d54830c6265be38-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" srcset="assets/optimized/7d54830c6265be38-480.webp 480w, assets/optimized/7d54830c6265be38-960.webp 960w, assets/optimized/7d54830c6265be38-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             <div class="compare__mask">
-                                <img class="compare__image-two" src="assets/optimized/8182d1376b403f99-1600.webp" alt="Before Edit"
-                                    loading="lazy" decoding="async" srcset="assets/optimized/8182d1376b403f99-480.webp 480w, assets/optimized/8182d1376b403f99-960.webp 960w, assets/optimized/8182d1376b403f99-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="2044" height="2555">
+                                <img class="compare__image-two lazy-image" data-src="assets/optimized/8182d1376b403f99-1600.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" data-srcset="assets/optimized/8182d1376b403f99-480.webp 480w, assets/optimized/8182d1376b403f99-960.webp 960w, assets/optimized/8182d1376b403f99-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="2044" height="2555" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272044%27%20height%3D%272555%27%2F%3E"><noscript><img class="compare__image-two" src="assets/optimized/8182d1376b403f99-1600.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" srcset="assets/optimized/8182d1376b403f99-480.webp 480w, assets/optimized/8182d1376b403f99-960.webp 960w, assets/optimized/8182d1376b403f99-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="2044" height="2555"></noscript>
                             </div>
                             <div class="compare__separator">
                                 <div class="compare__icon"></div>
@@ -352,11 +378,13 @@
                     <!-- Pair 17 -->
                     <div class="image-item">
                         <div class="compare" id="compare-17">
-                            <img class="compare__image-one" src="assets/optimized/b28b70815aa2c4b8-1000.webp" alt="After Edit"
-                                loading="lazy" decoding="async" srcset="assets/optimized/b28b70815aa2c4b8-480.webp 480w, assets/optimized/b28b70815aa2c4b8-960.webp 960w, assets/optimized/b28b70815aa2c4b8-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                            <img class="compare__image-one lazy-image" data-src="assets/optimized/b28b70815aa2c4b8-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" data-srcset="assets/optimized/b28b70815aa2c4b8-480.webp 480w, assets/optimized/b28b70815aa2c4b8-960.webp 960w, assets/optimized/b28b70815aa2c4b8-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-one" src="assets/optimized/b28b70815aa2c4b8-1000.webp" alt="After Edit"
+                                loading="lazy" decoding="async" srcset="assets/optimized/b28b70815aa2c4b8-480.webp 480w, assets/optimized/b28b70815aa2c4b8-960.webp 960w, assets/optimized/b28b70815aa2c4b8-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             <div class="compare__mask">
-                                <img class="compare__image-two" src="assets/optimized/fb18052467ff4fbe-1000.webp" alt="Before Edit"
-                                    loading="lazy" decoding="async" srcset="assets/optimized/fb18052467ff4fbe-480.webp 480w, assets/optimized/fb18052467ff4fbe-960.webp 960w, assets/optimized/fb18052467ff4fbe-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250">
+                                <img class="compare__image-two lazy-image" data-src="assets/optimized/fb18052467ff4fbe-1000.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" data-srcset="assets/optimized/fb18052467ff4fbe-480.webp 480w, assets/optimized/fb18052467ff4fbe-960.webp 960w, assets/optimized/fb18052467ff4fbe-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271000%27%20height%3D%271250%27%2F%3E"><noscript><img class="compare__image-two" src="assets/optimized/fb18052467ff4fbe-1000.webp" alt="Before Edit"
+                                    loading="lazy" decoding="async" srcset="assets/optimized/fb18052467ff4fbe-480.webp 480w, assets/optimized/fb18052467ff4fbe-960.webp 960w, assets/optimized/fb18052467ff4fbe-1000.webp 1000w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="1000" height="1250"></noscript>
                             </div>
                             <div class="compare__separator">
                                 <div class="compare__icon"></div>
@@ -375,8 +403,9 @@
         <div class="footer-container">
             <div class="footer-logo-container">
                 <a href="index.html" aria-label="HEIF Artist Home">
-                    <img src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo" loading="lazy"
-                        decoding="async" srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596">
+                    <img data-src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo lazy-image" loading="lazy"
+                        decoding="async" data-srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272550%27%20height%3D%27596%27%2F%3E"><noscript><img src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo" loading="lazy"
+                        decoding="async" srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596"></noscript>
                 </a>
             </div>
             <div class="footer-home">
@@ -395,9 +424,7 @@
         </div>
     </footer>
 
-    
 <script>
-        
 
         // Initialize Comparison Sliders
         function initComparisons() {

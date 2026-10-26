@@ -22,24 +22,21 @@
     <meta property="og:site_name" content="HEIF Artist">
 
     <!-- Preconnect for Performance (Google Fonts) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/img/logow.png">
     <link rel="apple-touch-icon" href="assets/img/logow.png">
 
-    <link rel="stylesheet" href="assets/css/css.css" />
-    <link rel="stylesheet" href="assets/css/cursor.css" />
-    <script src="assets/vendor/three.min.js" defer></script>
-    <script src="assets/vendor/gsap.min.js" defer></script>
-    <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
-    <script src="assets/vendor/lenis.min.js" defer></script>
-    <script src="assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="assets/css/css.css?v=20261026-speed2" />
+    <link rel="stylesheet" href="assets/css/cursor.css?v=20261026-speed2" />
 
-    <script src="assets/js/scroll-animations.js" defer></script>
-    <script src="assets/js/particles-effect.js" defer></script>
-<link rel="stylesheet" href="assets/css/performance.css">
+    <script src="assets/js/script.js?v=20261026-speed2" defer></script>
+
+    <script src="assets/js/scroll-animations.js?v=20261026-speed2" defer></script>
+
+<link rel="stylesheet" href="assets/css/performance.css?v=20261026-speed2">
+<script src="assets/js/image-delivery.js?v=20261026-speed2" defer></script>
+<noscript><style>.lazy-image{display:none!important}</style></noscript>
 </head>
 
 <body>
@@ -48,9 +45,6 @@
     <div class="scroll-tracker"></div>
 
     <!-- Preloader -->
-    
-
-    <canvas id="webgl-canvas"></canvas>
 
     <div class="stars-layer">
         <div class="stars-extra"></div>
@@ -84,57 +78,65 @@
             <h1 id="portfolio-heading" class="visually-hidden">Portfolio</h1>
             <div class="thumbnail">
                 <a href="work-detailposter.html">
-                    <img src="assets/optimized/7ca29b3886ff9124-750.webp" alt="Poster Design Portfolio" loading="lazy"
-                        decoding="async" srcset="assets/optimized/7ca29b3886ff9124-480.webp 480w, assets/optimized/7ca29b3886ff9124-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750">
+                    <img data-src="assets/optimized/7ca29b3886ff9124-750.webp" alt="Poster Design Portfolio" loading="lazy"
+                        decoding="async" data-srcset="assets/optimized/7ca29b3886ff9124-480.webp 480w, assets/optimized/7ca29b3886ff9124-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27750%27%20height%3D%27750%27%2F%3E"><noscript><img src="assets/optimized/7ca29b3886ff9124-750.webp" alt="Poster Design Portfolio" loading="lazy"
+                        decoding="async" srcset="assets/optimized/7ca29b3886ff9124-480.webp 480w, assets/optimized/7ca29b3886ff9124-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750"></noscript>
                     <div class="caption">POSTER DESIGN</div>
                 </a>
             </div>
             <div class="thumbnail">
                 <a href="work-detailgraphics.html">
-                    <img src="assets/optimized/047d73d7ba27ed36-750.webp" alt="Graphic Design Portfolio" loading="lazy"
-                        decoding="async" srcset="assets/optimized/047d73d7ba27ed36-480.webp 480w, assets/optimized/047d73d7ba27ed36-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750">
+                    <img data-src="assets/optimized/047d73d7ba27ed36-750.webp" alt="Graphic Design Portfolio" loading="lazy"
+                        decoding="async" data-srcset="assets/optimized/047d73d7ba27ed36-480.webp 480w, assets/optimized/047d73d7ba27ed36-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27750%27%20height%3D%27750%27%2F%3E"><noscript><img src="assets/optimized/047d73d7ba27ed36-750.webp" alt="Graphic Design Portfolio" loading="lazy"
+                        decoding="async" srcset="assets/optimized/047d73d7ba27ed36-480.webp 480w, assets/optimized/047d73d7ba27ed36-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750"></noscript>
                     <div class="caption">GRAPHIC DESIGN</div>
                 </a>
             </div>
             <div class="thumbnail">
                 <a href="work-detailmanipulation.html">
-                    <img src="assets/optimized/44ca6e3bd7c35fba-750.webp" alt="Photo Manipulation Portfolio"
-                        loading="lazy" decoding="async" srcset="assets/optimized/44ca6e3bd7c35fba-480.webp 480w, assets/optimized/44ca6e3bd7c35fba-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750">
+                    <img data-src="assets/optimized/44ca6e3bd7c35fba-750.webp" alt="Photo Manipulation Portfolio"
+                        loading="lazy" decoding="async" data-srcset="assets/optimized/44ca6e3bd7c35fba-480.webp 480w, assets/optimized/44ca6e3bd7c35fba-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27750%27%20height%3D%27750%27%2F%3E"><noscript><img src="assets/optimized/44ca6e3bd7c35fba-750.webp" alt="Photo Manipulation Portfolio"
+                        loading="lazy" decoding="async" srcset="assets/optimized/44ca6e3bd7c35fba-480.webp 480w, assets/optimized/44ca6e3bd7c35fba-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750"></noscript>
                     <div class="caption">PHOTO MANIPULATION</div>
                 </a>
             </div>
             <div class="thumbnail">
                 <a href="work-detailphotography.html">
-                    <img src="assets/optimized/d8f2dd52a62703d9-750.webp" alt="Photography Portfolio" loading="lazy"
-                        decoding="async" srcset="assets/optimized/d8f2dd52a62703d9-480.webp 480w, assets/optimized/d8f2dd52a62703d9-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750">
+                    <img data-src="assets/optimized/d8f2dd52a62703d9-750.webp" alt="Photography Portfolio" loading="lazy"
+                        decoding="async" data-srcset="assets/optimized/d8f2dd52a62703d9-480.webp 480w, assets/optimized/d8f2dd52a62703d9-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27750%27%20height%3D%27750%27%2F%3E"><noscript><img src="assets/optimized/d8f2dd52a62703d9-750.webp" alt="Photography Portfolio" loading="lazy"
+                        decoding="async" srcset="assets/optimized/d8f2dd52a62703d9-480.webp 480w, assets/optimized/d8f2dd52a62703d9-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750"></noscript>
                     <div class="caption">PHOTOGRAPHY</div>
                 </a>
             </div>
             <div class="thumbnail">
                 <a href="work-detailgrading.html">
-                    <img src="assets/optimized/543cd27e62929a2a-750.webp" alt="Color Grading Portfolio" loading="lazy"
-                        decoding="async" srcset="assets/optimized/543cd27e62929a2a-480.webp 480w, assets/optimized/543cd27e62929a2a-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750">
+                    <img data-src="assets/optimized/543cd27e62929a2a-750.webp" alt="Color Grading Portfolio" loading="lazy"
+                        decoding="async" data-srcset="assets/optimized/543cd27e62929a2a-480.webp 480w, assets/optimized/543cd27e62929a2a-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27750%27%20height%3D%27750%27%2F%3E"><noscript><img src="assets/optimized/543cd27e62929a2a-750.webp" alt="Color Grading Portfolio" loading="lazy"
+                        decoding="async" srcset="assets/optimized/543cd27e62929a2a-480.webp 480w, assets/optimized/543cd27e62929a2a-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750"></noscript>
                     <div class="caption">GRADING</div>
                 </a>
             </div>
             <div class="thumbnail">
                 <a href="work-detailvideowork.html">
-                    <img src="assets/optimized/5f943dada0cefe4b-750.webp" alt="Video Editing Portfolio" loading="lazy"
-                        decoding="async" srcset="assets/optimized/5f943dada0cefe4b-480.webp 480w, assets/optimized/5f943dada0cefe4b-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750">
+                    <img data-src="assets/optimized/5f943dada0cefe4b-750.webp" alt="Video Editing Portfolio" loading="lazy"
+                        decoding="async" data-srcset="assets/optimized/5f943dada0cefe4b-480.webp 480w, assets/optimized/5f943dada0cefe4b-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27750%27%20height%3D%27750%27%2F%3E"><noscript><img src="assets/optimized/5f943dada0cefe4b-750.webp" alt="Video Editing Portfolio" loading="lazy"
+                        decoding="async" srcset="assets/optimized/5f943dada0cefe4b-480.webp 480w, assets/optimized/5f943dada0cefe4b-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750"></noscript>
                     <div class="caption">VIDEO EDITING</div>
                 </a>
             </div>
             <div class="thumbnail">
                 <a href="work-detailclothing.html">
-                    <img src="assets/optimized/475c29327cdfbc1c-750.webp" alt="Clothing Design Portfolio"
-                        loading="lazy" decoding="async" srcset="assets/optimized/475c29327cdfbc1c-480.webp 480w, assets/optimized/475c29327cdfbc1c-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750">
+                    <img data-src="assets/optimized/475c29327cdfbc1c-750.webp" alt="Clothing Design Portfolio"
+                        loading="lazy" decoding="async" data-srcset="assets/optimized/475c29327cdfbc1c-480.webp 480w, assets/optimized/475c29327cdfbc1c-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27750%27%20height%3D%27750%27%2F%3E"><noscript><img src="assets/optimized/475c29327cdfbc1c-750.webp" alt="Clothing Design Portfolio"
+                        loading="lazy" decoding="async" srcset="assets/optimized/475c29327cdfbc1c-480.webp 480w, assets/optimized/475c29327cdfbc1c-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750"></noscript>
                     <div class="caption">CLOTHING DESIGN</div>
                 </a>
             </div>
             <div class="thumbnail">
                 <a href="work-detailwedding.html">
-                    <img src="assets/optimized/d92c7d3d3d96faa1-750.webp" alt="Wedding Portfolio" loading="lazy"
-                        decoding="async" srcset="assets/optimized/d92c7d3d3d96faa1-480.webp 480w, assets/optimized/d92c7d3d3d96faa1-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750">
+                    <img data-src="assets/optimized/d92c7d3d3d96faa1-750.webp" alt="Wedding Portfolio" loading="lazy"
+                        decoding="async" data-srcset="assets/optimized/d92c7d3d3d96faa1-480.webp 480w, assets/optimized/d92c7d3d3d96faa1-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750" class="lazy-image" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27750%27%20height%3D%27750%27%2F%3E"><noscript><img src="assets/optimized/d92c7d3d3d96faa1-750.webp" alt="Wedding Portfolio" loading="lazy"
+                        decoding="async" srcset="assets/optimized/d92c7d3d3d96faa1-480.webp 480w, assets/optimized/d92c7d3d3d96faa1-750.webp 750w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw" width="750" height="750"></noscript>
                     <div class="caption">WEDDING</div>
                 </a>
             </div>
@@ -146,8 +148,9 @@
         <div class="footer-container">
             <div class="footer-logo-container">
                 <a href="index.html" aria-label="HEIF Artist Home">
-                    <img src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo" loading="lazy"
-                        decoding="async" srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596">
+                    <img data-src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo lazy-image" loading="lazy"
+                        decoding="async" data-srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272550%27%20height%3D%27596%27%2F%3E"><noscript><img src="assets/optimized/b6daf8fdbaca4369-1600.webp" alt="HEIF Artist Logo" class="footer-logo" loading="lazy"
+                        decoding="async" srcset="assets/optimized/b6daf8fdbaca4369-480.webp 480w, assets/optimized/b6daf8fdbaca4369-960.webp 960w, assets/optimized/b6daf8fdbaca4369-1600.webp 1600w" sizes="160px" width="2550" height="596"></noscript>
                 </a>
             </div>
             <div class="footer-home">
@@ -165,7 +168,7 @@
                     target="_blank" rel="noopener noreferrer">Jayesh Mepani</a></p>
         </div>
     </footer>
-    
+
 </body>
 
 </html>

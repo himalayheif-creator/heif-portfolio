@@ -3,7 +3,7 @@
  * Uses Three.js + GSAP ScrollTrigger to render and animate the photoshop.obj file
  */
 
-document.addEventListener("DOMContentLoaded", () => {
+function startPhotoshopModel() {
     // 1. Setup Three.js Scene
     const container = document.getElementById('hero-3d-model');
     if (!container || !window.THREE || !THREE.GLTFLoader || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Transparent background so the stars show through
     let renderer;
     try { renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true }); } catch { return; }
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.25));
     renderer.outputEncoding = THREE.sRGBEncoding; // Required for pristine GLB color rendering
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.2;
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let heroModel;
 
     const loader = new THREE.GLTFLoader();
-    loader.load(
+    const loadModel = () => loader.load(
         'assets/3d/photoshop.glb',
         (gltf) => {
             heroModel = gltf.scene;
@@ -84,10 +84,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Trigger animations once loaded
             initAnimations();
+            document.querySelector('.model-still-ps')?.classList.add('model-still-loaded');
         },
         undefined,
         (error) => console.error('Error loading Ps model:', error)
     );
+
+    if ('requestIdleCallback' in window) requestIdleCallback(loadModel, { timeout: 1200 });
+    else setTimeout(loadModel, 500);
 
     // Handle Responsive 3D Geometry
     function updateModelScaleAndPosition() {
@@ -141,10 +145,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // 6. Animation Loop (Mouse Parallax & Smoothing)
+    let inViewport = false;
+    let animationFrame = 0;
+    const scheduleFrame = () => {
+        if (inViewport && !document.hidden && !animationFrame) animationFrame = requestAnimationFrame(animate);
+    };
+    new IntersectionObserver(([entry]) => { inViewport = entry.isIntersecting; scheduleFrame(); }, { rootMargin: '80px' }).observe(container);
+    document.addEventListener('visibilitychange', scheduleFrame);
+
     function animate() {
-        requestAnimationFrame(animate);
-        const bounds = container.getBoundingClientRect();
-        if (document.hidden || bounds.bottom < 0 || bounds.top > innerHeight) return;
+        animationFrame = 0;
+        if (!inViewport || document.hidden) return;
 
         // Target rotations and positions based on mouse
         const targetRotY = (mouseX * 0.0005);
@@ -165,8 +176,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         renderer.render(scene, camera);
+        scheduleFrame();
     }
-    animate();
 
     // 7. GSAP ScrollTrigger Integration
     function initAnimations() {
@@ -200,4 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     }
-});
+}
+
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', startPhotoshopModel, { once: true });
+else startPhotoshopModel();

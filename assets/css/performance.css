@@ -15,16 +15,14 @@ img[width][height] { height: auto; }
 @media(max-width:900px) { .masonry-container { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:540px) { .masonry-container { grid-template-columns:minmax(0,1fr); padding:12px; } }
 
-/* The primary heading must paint immediately, rather than waiting 1.5 seconds. */
-.hero h1 { opacity: 1; animation: none; }
+/* Preserve the heading entrance motion while keeping its start almost immediate. */
+.hero h1 { animation-duration:.9s; animation-delay:.12s; animation-timing-function:cubic-bezier(.22,.68,0,1.02); }
 
-/* Pre-rendered artwork keeps the visual without WebGL, models or render loops. */
-.model-still { pointer-events:none; object-fit:contain; }
+/* Keep the lightweight artwork visible while the interactive models load. */
+.model-still { pointer-events:none; object-fit:contain; transition:opacity .65s ease; }
+.model-still.model-still-loaded { opacity:0; }
 .model-still-ps { position:absolute; width:clamp(100px,16vw,220px); height:auto; right:18%; top:18%; }
 .model-still-ae { position:absolute; width:clamp(64px,10vw,145px); height:auto; left:7%; bottom:7%; }
-.stars-layer::before, .stars-layer::after { animation:none; opacity:.55; }
 .stars-layer { z-index:-1; }
-.stars-layer::before { background-image:radial-gradient(1px 1px at 25px 30px,#fff,transparent),radial-gradient(1px 1px at 90px 160px,#fff,transparent),radial-gradient(1px 1px at 180px 70px,#fff,transparent),radial-gradient(1.5px 1.5px at 270px 250px,#aaa,transparent),radial-gradient(1px 1px at 390px 130px,#ddd,transparent),radial-gradient(1px 1px at 450px 320px,#ddd,transparent); background-size:510px 390px; }
-.stars-layer::after { background-image:radial-gradient(1px 1px at 150px 210px,#ccc,transparent),radial-gradient(1px 1px at 330px 40px,#ccc,transparent),radial-gradient(1px 1px at 50px 350px,#aaa,transparent); background-size:640px 430px; }
 @media(max-width:768px) { .model-still-ps { width:70px; right:12%; top:10%; opacity:.8; } .model-still-ae { width:52px; left:10%; bottom:5%; } }
 @media(prefers-reduced-motion:reduce) { .model-still { transform:none!important; } }

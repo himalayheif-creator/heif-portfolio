@@ -1,14 +1,14 @@
 /**
  * HEIF Artist - After Effects 3D Integration
  */
-document.addEventListener("DOMContentLoaded", () => {
+function startAfterEffectsModel() {
     const container = document.getElementById('ae-3d-model');
     if (!container || !window.THREE || !THREE.GLTFLoader || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const scene = new THREE.Scene();
     let renderer;
     try { renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true }); } catch { return; }
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.25));
     renderer.outputEncoding = THREE.sRGBEncoding;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.2;
@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             updateModelScaleAndPosition();
             initAnimations(aeModel, 0.2, -0.1);
+            document.querySelector('.model-still-ae')?.classList.add('model-still-loaded');
         },
         undefined,
         (error) => console.error('Error loading AE model:', error)
@@ -138,10 +139,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    let inViewport = false;
+    let animationFrame = 0;
+    let modelRequested = false;
+    const scheduleFrame = () => {
+        if (inViewport && !document.hidden && !animationFrame) animationFrame = requestAnimationFrame(animate);
+    };
     function animate() {
-        requestAnimationFrame(animate);
-        const bounds = container.getBoundingClientRect();
-        if (document.hidden || bounds.bottom < 0 || bounds.top > innerHeight) return;
+        animationFrame = 0;
+        if (!inViewport || document.hidden) return;
 
         const targetRotY = (mouseX * 0.0005);
         const targetRotX = (mouseY * 0.0005);
@@ -161,12 +167,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         renderer.render(scene, camera);
+        scheduleFrame();
     }
     if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver(entries => {
-            if (entries.some(entry => entry.isIntersecting)) { observer.disconnect(); loadModel(); }
+        const observer = new IntersectionObserver(([entry]) => {
+            inViewport = entry.isIntersecting;
+            if (inViewport && !modelRequested) { modelRequested = true; loadModel(); }
+            scheduleFrame();
         }, { rootMargin: '150px' });
         observer.observe(container);
     } else { loadModel(); }
-    animate();
-});
+    document.addEventListener('visibilitychange', scheduleFrame);
+}
+
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', startAfterEffectsModel, { once: true });
+else startAfterEffectsModel();

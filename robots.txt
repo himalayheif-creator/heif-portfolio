@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://himalayheif-creator.github.io/heif-portfolio/sitemap.xml

@@ -2,12 +2,14 @@
 (() => {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  const scripts = [
+  const libraries = [
     'assets/vendor/three.min.js',
     'assets/vendor/GLTFLoader.js',
     'assets/vendor/gsap.min.js',
     'assets/vendor/ScrollTrigger.min.js',
-    'assets/vendor/lenis.min.js',
+    'assets/vendor/lenis.min.js'
+  ];
+  const effects = [
     'assets/js/hero1-3d.js',
     'assets/js/hero-3d.js',
     'assets/js/ae-3d.js',
@@ -15,13 +17,14 @@
   ];
 
   let started = false;
-  const loadScript = (src) => new Promise((resolve, reject) => {
+  const loadScripts = (sources) => Promise.all(sources.map(src => new Promise(resolve => {
     const script = document.createElement('script');
-    script.src = src + '?v=20261026-motion';
+    script.src = src + '?v=20261026-motion2';
+    script.async = false;
     script.onload = resolve;
-    script.onerror = () => reject(new Error(`Could not load animation: ${src}`));
+    script.onerror = () => { console.warn(`Could not load animation: ${src}`); resolve(); };
     document.head.appendChild(script);
-  });
+  })));
 
   async function startAnimations() {
     if (started) return;
@@ -30,10 +33,8 @@
       return;
     }
     started = true;
-    for (const src of scripts) {
-      try { await loadScript(src); }
-      catch (error) { console.warn(error.message); }
-    }
+    await loadScripts(libraries);
+    await loadScripts(effects);
 
     if (window.Lenis && window.gsap && window.ScrollTrigger && matchMedia('(pointer: fine)').matches) {
       const lenis = new Lenis({ duration: 0.85, smoothTouch: false });
@@ -44,8 +45,8 @@
   }
 
   function schedule() {
-    if ('requestIdleCallback' in window) requestIdleCallback(startAnimations, { timeout: 1800 });
-    else setTimeout(startAnimations, 900);
+    if ('requestIdleCallback' in window) requestIdleCallback(startAnimations, { timeout: 500 });
+    else setTimeout(startAnimations, 250);
   }
 
   if (document.readyState === 'complete') schedule();
